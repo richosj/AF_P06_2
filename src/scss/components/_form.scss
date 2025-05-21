@@ -1,0 +1,26 @@
+@use 'sass:map';
+@use 'sass:math';
+@use '../utils/variables' as *;
+@use '../utils/functions' as *;
+@use '../utils/mixins' as *;
+
+
+.krds-input,
+.krds-form-select{
+    height: 4rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    border-color: #c6c6c6;
+}
+
+.input-group{
+    display: flex;
+    align-items: center;
+    gap: 0 1rem;
+    input{
+        flex: 1;
+    }
+    button{
+        flex-shrink: 0;
+    }
+}

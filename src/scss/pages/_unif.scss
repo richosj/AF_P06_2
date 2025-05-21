@@ -1,0 +1,29 @@
+@use 'sass:map';
+@use 'sass:math';
+@use '../utils/variables' as *;
+@use '../utils/functions' as *;
+@use '../utils/mixins' as *;
+
+/* 통합검색 */
+.unif{
+    margin-top: 4rem;
+    section{
+        padding-bottom: 3rem;
+        margin-bottom: 3rem;
+        border-bottom: 1px solid #ccc;
+        .hgroup{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h2{
+                margin-bottom: 1rem;
+                font-size: 2.4rem;
+                color: #000;
+            }
+        }
+        .card-list{
+            grid-template-columns: repeat(3,minmax(0,1fr));
+        }
+        
+    }
+}

@@ -1,0 +1,42 @@
+@use 'sass:map';
+@use 'sass:math';
+@use '../utils/variables' as *;
+@use '../utils/functions' as *;
+@use '../utils/mixins' as *;
+
+
+.required{
+    font-size: 0;
+    &::after{
+        content: '*';
+        color: #de3412;
+        font-size: 1.5rem;
+    }
+}
+
+/* 작성 */
+.write-container{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem 0;
+    section{
+        flex: 1;
+        border: 1px solid #ddd;
+        border-radius: 1.2rem;
+        padding: 4rem;
+        .section-title{
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            &::after{
+                content: '';
+                display: inline-block;
+                width: 1.9rem;
+                height: 1.2rem;
+                background: url(#{$image-path}/blit-section-title.png) no-repeat 0 0;
+                margin-left: 2rem;
+                vertical-align: middle;
+            }
+        }
+    }
+}

@@ -1,0 +1,220 @@
+@use 'sass:map';
+@use 'sass:math';
+@use '../utils/variables' as *;
+@use '../utils/functions' as *;
+@use '../utils/mixins' as *;
+
+#main{
+    background: url(#{$image-path}/main-bg.png) no-repeat 50% 0;
+
+}
+
+.main-sect{
+    .tit{
+        color: #000;
+        font-weight: 700;
+        font-size: 3.2rem;
+        padding-bottom: 1.5rem;
+    }
+}
+
+.main-top-sch{
+    padding: 6.5rem 0;
+    .inner{
+        width: 80rem;
+    }
+    .sch-tit{
+        text-align: center;
+        color: #000;
+        font-weight: 700;
+        font-size: 3.2rem;
+        padding-bottom: 1.5rem;
+    }
+   .sch-form-wrap{
+        gap: 2rem 0;
+    }
+    .sch-input .krds-input.xlarge{
+        border-color: var(--brand-color-primary);
+        border-width: .3rem;
+        font-size: 2.4rem;
+    }
+    .krds-btn.icon .svg-icon{
+        background-color: var(--brand-color-primary);
+    }
+    .sch-details{
+        align-self: center;
+        .btn-more-filter{
+            border-radius: .6rem;
+            font-size: 1.9rem;
+            color: #000;
+            font-weight: 400;
+            display: inline-flex;
+            align-items: center;
+            gap:0 .8rem;
+        }
+    }
+    .sch-tag{
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap:0 2.4rem;
+        dt{
+            color: #000;
+            font-weight: 700;
+            font-size: 1.7rem;
+        }
+        dd{
+            .link{
+                border-radius: .6rem;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+.main-grid-wrap{
+    display: flex;
+    gap: 0 2.4rem;
+}
+
+
+.main-data-status {
+    background-color: #eef2f7;
+    flex:1;
+    border-radius: 3.2rem;
+    padding: 4rem;
+    &-title{
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: #000;
+    }
+    &-content{
+        display: flex;
+        gap:0 4rem;
+    }
+    .chart{
+        width: 27rem;
+    }
+    &-list{
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:0 .8rem;
+    }
+    &-item{
+        background-color: #fff;
+        border-radius: 2.4rem;
+        height: 19rem;
+        padding: 0;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: .3rem;
+            width: 4.8rem;
+        }
+        &.item-1{
+            &::after{
+                background-color: #5f36f6;
+            }
+            color: #5f36f6;
+        }
+        &.item-2{
+            &::after{
+                background-color: #1e90f2;
+            }
+            color: #1e90f2;
+        }
+        &.item-3{
+            &::after{
+                background-color: #48caa3;
+            }
+            color: #48caa3; 
+        }
+        .icon{
+            text-align: center;
+            padding-top: 3.2rem;
+        }
+        &-value{
+            font-size: 3.2rem;
+            font-weight: 700;
+            padding: 2.5rem 0 1rem;
+            text-align: center;
+            line-height: 1;
+        }
+        &-title{
+            font-size: 1.5rem;
+            color: #1d1d1d;
+            text-align: center;
+        }
+    }
+}
+
+.main-data-banner{
+    overflow: hidden;
+    border-radius: 3.2rem;
+    width: 38.4rem;
+    position: relative;
+    
+    .swiper-indicator{
+        position: absolute;
+        z-index: 2;
+        bottom: 3rem;
+        right: 3rem;
+    }
+    .swiper-indicator-container{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: row;
+        gap: var(--krds-gap-3);
+    }
+}
+
+.main-sect{
+    &.bg{
+        margin-top: 6.5rem;
+        padding: 6.5rem 0;
+        background-color: #eef2f7;
+    }
+}
+.main-detail-wrap{
+    display: flex;
+    gap: 0 2.4rem;
+    .detail-inner{
+        width: calc(50% - 1.2rem);
+        background-color: #fff;
+        border-radius: 1.2rem;
+        border: 1px solid #c6c6c6;
+        padding: 2.4rem;
+        .detail-tit{
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #000;
+            
+        }
+        .detail-cont{
+            font-size: 1.7rem;
+            color: #555555;
+            padding-top: 1.5rem;
+        }
+        .link-wrap{
+            text-align: right;
+            .link{
+                font-size: 1.7rem;
+                color: #1d1d1d;
+                display: inline-flex;
+                align-items: center;
+                gap: 0 .8rem;
+                svg{
+                    width: 1.6rem;
+                    height: 1.6rem;
+                }
+            }
+        }
+    }
+}

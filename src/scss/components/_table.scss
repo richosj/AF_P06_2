@@ -1,0 +1,101 @@
+@use '../utils/variables' as *;
+@use '../utils/functions' as *;
+@use '../utils/mixins' as *;
+@use 'sass:map';
+@use 'sass:math';
+
+$table-header-bg-color: #f8f9fa;
+$table-header-border-color: #ddd;
+$table-tbody-border-color: #ddd;
+
+$table-tbody-bg-danger: rgba(#bd2c0f,0.1);
+$table-tbody-bg-warning: rgba(#8a5c00,0.1);
+$table-tbody-bg-success: rgba(#267337,0.1);
+
+.table{
+    border-top: 1px solid #000;
+    table{
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th,
+    td{
+        padding: 1rem 0;
+    }
+    thead{
+        background-color: $table-header-bg-color;
+        tr{
+            border-bottom: 1px solid $table-header-border-color;
+        }
+    }
+    tbody{
+        tr{
+            border-bottom: 1px solid $table-tbody-border-color;
+            &.danger{
+                background-color: $table-tbody-bg-danger;
+            }
+            &.warning{
+                background-color: $table-tbody-bg-warning;
+            }
+            &.success{
+                background-color: $table-tbody-bg-success;
+            }
+        }
+    }
+    &.table-list{
+        text-align: center;
+    }
+}
+
+.table-list{
+    table{
+        thead{
+            th{
+                height: 5.8rem;
+                font-size: 1.7rem;
+            }
+        }
+        tbody{
+            td{
+                height: 5.8rem;
+                font-size: 1.7rem;
+                font-weight: 400;
+                color: #555555;
+            }
+            .subject{
+                text-align: left;
+                font-weight: 700;
+                color: #000;
+            }
+        }
+    }
+}
+
+
+
+.meta-table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border-top: 1px solid #000;
+    tr{
+        border-bottom: 1px solid #c6c6c6;
+    }
+    th,
+    td{
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+        //min-height: 6rem;
+    }
+    th{
+        background-color: #fafafa;
+        padding-left: 2rem;
+        padding-right: 1rem;
+        color: #1d1d1d;
+        font-weight: 700;
+        text-align: left;
+    }
+    td{
+        //padding-left: 2rem;
+    }
+}

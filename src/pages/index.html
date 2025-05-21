@@ -1,0 +1,196 @@
+<!-- @pageTitle 메인 -->
+<!-- @pageCreated 2025-05-09 -->
+<!-- @pageUpdated 2025-05-12 -->
+<!-- @pageNote 메인 구성 변경 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {{> meta}}
+</head>
+
+<body>
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+
+    <main id="main">
+
+        <div class="main-top-sch">
+            <div class="inner">
+            <div class="sch-tit">통합검색</div>
+            <div class="sch-form-wrap vert">
+                <div class="sch-input">
+                    <input type="text" class="krds-input xlarge" placeholder="검색어를 입력해주세요." value="" title="검색어 입력">
+                    <button type="button" class="krds-btn xlarge icon ico-search" aria-label="검색">
+                        <span class="sr-only">검색</span>
+                        <i class="svg-icon ico-sch"></i>
+                    </button>
+                </div>
+                <div class="sch-details">
+                    <button class="btn-more-filter" title="검색 상세 조건 열림">
+                        <i class="svg-icon ico-sch-plus"></i>
+                        검색필터
+                    </button>
+                </div>
+                <dl class="sch-tag">
+                    <dt>추천 검색어</dt>
+                    <dd class="krds-tag-wrap large" aria-live="polite">
+                        <a href="#" class="krds-btn-tag link">안전보건교육</a>
+                        <a href="#" class="krds-btn-tag link">퇴직금계산기</a>
+                        <a href="#" class="krds-btn-tag link">실업인정신청</a>
+                        <a href="#" class="krds-btn-tag link">중간정산</a>
+                        <a href="#" class="krds-btn-tag link">국민 내일 배움</a>
+                    </dd>
+                </dl>
+            </div>
+            </div>
+        </div>
+        <!-- //main-top-sch -->
+
+        <div class="main-sect">
+            <div class="inner">
+                <div class="main-tit-wrap">
+                    <h2 class="tit">데이터 통계</h2>
+                </div>
+
+                <div class="main-grid-wrap">
+                    <div class="main-data-status">
+                        <div class="main-data-status-title">데이터 현황</div>
+                        <div class="main-data-status-content">
+                            <div class="chart">차트공간 width:270px</div>
+                            <div class="main-data-status-list">
+                                <div class="main-data-status-item item-1">
+                                    <div class="icon"><img src="../assets/images/main-data-icon-1.png" alt=""></div>
+                                    <div class="main-data-status-item-value">100</div>
+                                    <div class="main-data-status-item-title">데이터 현황</div>
+                                </div>
+                                <div class="main-data-status-item item-2">
+                                    <div class="icon"><img src="../assets/images/main-data-icon-2.png" alt=""></div>
+                                    <div class="main-data-status-item-value">100</div>
+                                    <div class="main-data-status-item-title">데이터 현황</div>
+                                </div>
+                                <div class="main-data-status-item item-3">
+                                    <div class="icon"><img src="../assets/images/main-data-icon-3.png" alt=""></div>
+                                    <div class="main-data-status-item-value">100</div>
+                                    <div class="main-data-status-item-title">데이터 현황</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //main-data-status -->
+                    <div class="main-data-banner">
+                        <div class="swiper">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide"><a href="#"><img src="https://dummyimage.com/385x340" alt=""></a></li>
+                                <li class="swiper-slide"><a href="#"><img src="https://dummyimage.com/385x340" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="swiper-indicator">
+                            <div class="swiper-indicator-container">
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-controller">
+                                    <button type="button" class="swiper-button-play">
+                                    <span class="sr-only">슬라이드 재생</span>
+                                    </button>
+                                    <button type="button" class="swiper-button-stop">
+                                    <span class="sr-only">슬라이드 멈춤</span>
+                                    </button>
+                                </div>
+                                <div class="swiper-navigation">
+                                    <button type="button" class="swiper-button-prev">
+                                    <span class="sr-only">이전</span>
+                                    </button>
+                                    <button type="button" class="swiper-button-next">
+                                    <span class="sr-only">다음</span>
+                                    </button>
+                                    <a href="#" class="swiper-button-more">
+                                    <span class="sr-only">더 보기</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //main-sect -->
+
+        <div class="main-sect bg">
+            <div class="inner">
+                <div class="main-tit-wrap">
+                    <h2 class="tit">상세 메뉴</h2>
+                </div>
+                <div class="main-detail-wrap">
+                    <div class="detail-inner">
+                        <div class="detail-tit">융복합 활용 시스템</div>
+                        <div class="detail-cont">
+                            <p>민군경 해양 데이터 관리 시스템의 데이터를 활용하여 공간분석, 시나리오 분석 등 분석 기술 서비스 기능 제공 시스템</p>
+                            <div class="link-wrap">
+                                <a href="#" class="link">자세히 보기 <i class="svg-icon ico-more right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail-inner">
+                        <div class="detail-tit">데이터 운영 표준 조회</div>
+                        <div class="detail-cont">
+                            <p>민군경 데이터 관리 플랫폼에서 사용되는 데이터 표준 관리 지침을 제공합니다. <br>데이터 표준 관리의 상세 항목을 조회할 수 있습니다.</p>
+                            <div class="link-wrap">
+                                <a href="#" class="link">자세히 보기 <i class="svg-icon ico-more right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+    <!-- //main -->
+
+    <!-- footer -->
+    {{> footer}}
+    <!-- //footer -->
+     
+    <!-- 통합검색 상세 조건 -->
+    {{> search-detail}}
+    <!-- //통합검색 상세 조건 -->
+
+    <script type="module" src="/js/main.js"></script>
+    <script>
+        const eleBanSwiper = new Swiper(".main-data-banner .swiper", {
+          slidesPerView: 1,
+          spaceBetween: 16,
+          speed: 400,
+          loop: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          },
+          navigation: {
+            nextEl: ".main-data-banner .swiper-button-next",
+            prevEl: ".main-data-banner .swiper-button-prev",
+          },
+          pagination: {
+            el: ".main-data-banner .swiper-pagination",
+            type: "fraction",
+          },
+        });
+        const $eleBanSwiperPlay = document.querySelector(".main-data-banner .swiper-button-play");
+        const $eleBanSwiperStop = document.querySelector(".main-data-banner .swiper-button-stop");
+        $eleBanSwiperPlay.style.display = "none";
+        $eleBanSwiperPlay.addEventListener("click", () => {
+          eleBanSwiper.autoplay.start();
+          $eleBanSwiperStop.style.display = "";
+          $eleBanSwiperPlay.style.display = "none";
+        });
+        $eleBanSwiperStop.addEventListener("click", () => {
+          eleBanSwiper.autoplay.stop();
+          $eleBanSwiperStop.style.display = "none";
+          $eleBanSwiperPlay.style.display = "";
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+
+:root {
+  --krds-contents-wrap-size: 1200px;
+  --brand-color-primary: #0050d1;
+}
+
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+  font-family: "Pretendard", sans-serif;
+}
+
+html{
+  font-size: 10px;
+}
+body,th,td,input,select,textarea,button{
+  font-size: 1.4rem;
+  font-family: "Pretendard", sans-serif;
+  color: #212121;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+
+a {
+  text-decoration: none;
+  //color: inherit;
+  color: #212121;
+}
+
+img {
+  vertical-align: top;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+/* Font settings */
+body {
+  font-family: "Pretendard", sans-serif;
+  color: #212121;
+}
+
+
+.visually-hidden{
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.inner{
+  padding-left: 0;
+  padding-right: 0;
+  width: var(--krds-contents-wrap-size);
+}
+
+.text-bold{
+  font-weight: 700;
+}
+
+@for $i from 1 through 100{
+  .w-#{$i}{
+    width: #{$i}px;
+  }
+}

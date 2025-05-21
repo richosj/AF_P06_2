@@ -1,0 +1,35 @@
+
+@use 'sass:map';
+@use 'sass:math';
+@use '../utils/variables' as *;
+@use '../utils/functions' as *;
+@use '../utils/mixins' as *;
+
+.icon-lab{
+    background: url(#{$image-path}/icon-lab@12x16.png) no-repeat 50% 50%;
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.6rem;
+}
+
+.icon-grid{
+    background: url(#{$image-path}/icon-grid@14x14.png) no-repeat 50% 50%;
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;    
+}
+
+[aria-pressed="true"] .icon-grid{
+    background-image: url(#{$image-path}/icon-grid-active@14x14.png);
+}
+
+.icon-list{
+    background: url(#{$image-path}/icon-list@14x14.png) no-repeat 50% 50%;
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+[aria-pressed="true"] .icon-list{
+    background-image: url(#{$image-path}/icon-list-active@14x14.png);
+}

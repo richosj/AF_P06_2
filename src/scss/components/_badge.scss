@@ -1,0 +1,43 @@
+
+.badge{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 .7rem;
+    font-size: 1.5rem;
+    height: 2.4rem;
+    vertical-align: top;
+    text-align: center;
+    border-radius: .6rem;
+    &-round{
+        border-radius: 1.2rem;
+    }
+    &-secondary{
+        color: #001d49;
+        border: 1px solid #ccd2db;
+        background-color: #f0f0f0;
+    }
+    &-primary{
+        background-color: #d3ebfd;
+        color: #096ab3;
+    }
+    &-success{
+        background-color: #d8eedd;
+        color: #228738;
+    }
+    &-danger{
+        background-color: #fcdfd9;
+        color: #de3412;
+    }
+    &-stblue{
+        background-color: #7f8ea4;
+        color: #fff;
+    }
+    // 사이즈
+    &-lg{
+        height: 4rem;
+        font-size: 1.5rem;
+        padding: 0 1.5rem;
+        text-align: center;
+    }
+}

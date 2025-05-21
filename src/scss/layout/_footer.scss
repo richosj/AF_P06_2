@@ -1,0 +1,13 @@
+@use '../utils/variables' as *;
+@use '../utils/functions' as *;
+@use '../utils/mixins' as *;
+@use 'sass:map';
+@use 'sass:math';
+
+
+#krds-footer{
+    background-color: #f8f8f8;
+}
+#krds-footer .f-btm .f-btm-text .f-menu .point{
+    color:#001c4a;
+}

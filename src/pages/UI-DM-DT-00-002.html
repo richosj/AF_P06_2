@@ -1,0 +1,121 @@
+<!-- @pageTitle UI-DM-DT-00-002_데이터 목록(그리드 형식) -->
+<!-- @pageCreated 2025-05-12 -->
+<!-- @pageUpdated 2025-05-12 -->
+<!-- @pageNote 서브화면 스케치 작업 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {{> meta}}
+</head>
+
+<body>
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+
+    <!-- breadcrumb -->
+    {{> breadcrumb }}
+    <!-- breadcrumb -->
+
+    <main id="contents">
+        <div class="page-header">
+            <h2 class="page-header-title">데이터</h2>
+        </div>
+        <!-- //page-header -->
+        
+        {{> search-top-box }}
+        <!-- //search-top-box -->
+
+        <div class="page-content">
+            {{> aside}}
+            
+            <div class="page-content-body">
+                <!-- 검색 결과 상단 영역 -->
+                <div class="search-list-top">
+                    <div class="search-list-result">
+                        검색결과 <b class="total">249</b>건
+                    </div>
+                    <div class="search-list-sort">
+                        <div class="search-legend-group">
+                            <button type="button" class="item krds-badge bg-light-danger">기밀</button>
+                            <button type="button" class="item krds-badge bg-light-warning">내부 전용</button>
+                            <button type="button" class="item krds-badge bg-light-success">일반</button>
+                        </div>
+                        <div class="sort-type-group">
+                            <button type="button" class="sort-type-group-item" aria-pressed="true" title="갤러리형 보기">갤러리형</button>
+                            <button type="button" class="sort-type-group-item" title="목록형 보기" aria-pressed="false">목록형</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- //search-list-top -->
+
+                <!-- 테이블 데이터 영역 -->
+                <div class="table table-list">
+                    <table>
+                        <caption class="sr-only">데이터 목록 테이블</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">순번</th>
+                                <th scope="col">데이터명</th>
+                                <th scope="col">관리기관</th>
+                                <th scope="col">카테고리</th>
+                                <th scope="col">자료유형</th>
+                                <th scope="col">등록일</th>
+                                <th scope="col">수정일</th>
+                                <th scope="col">보안등급</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="success">
+                                <td>1</td>
+                                <td>데이터명</td>
+                                <td>관리기관</td>
+                                <td>카테고리</td>
+                                <td>자료유형</td>
+                                <td>등록일</td>
+                                <td>수정일</td>
+                                <td><span class="krds-badge bg-light-success">일반</span></td>
+                            </tr>
+                            <tr class="danger">
+                                <td>2</td>
+                                <td>데이터명</td>
+                                <td>관리기관</td>
+                                <td>카테고리</td>
+                                <td>자료유형</td>
+                                <td>등록일</td>
+                                <td>수정일</td>
+                                <td><span class="krds-badge bg-light-danger">기밀</span></td>
+                            </tr>
+                            <tr class="warning">
+                                <td>3</td>
+                                <td>데이터명</td>
+                                <td>관리기관</td>
+                                <td>카테고리</td>
+                                <td>자료유형</td>
+                                <td>등록일</td>
+                                <td>수정일</td>
+                                <td><span class="krds-badge bg-light-warning">내부</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //table table-list -->
+            </div>
+            <!-- //page-content-body -->
+        </div>
+        <!-- //page-content -->
+    </main>
+    
+    <!-- footer -->
+    {{> footer}}
+    <!-- //footer -->
+
+    <!-- 통합검색 상세 조건 -->
+    {{> search-detail}}
+    <!-- //통합검색 상세 조건 -->
+
+    <script type="module" src="/js/main.js"></script>
+</body>
+
+</html>

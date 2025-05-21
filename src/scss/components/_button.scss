@@ -1,0 +1,30 @@
+@use 'sass:map';
+@use 'sass:math';
+@use '../utils/variables' as *;
+@use '../utils/functions' as *;
+@use '../utils/mixins' as *;
+
+
+.krds-btn{
+    height: 4rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.footer-actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div{
+        display: flex;
+        align-items: center;
+        gap: 0 1rem;
+        .krds-btn{
+            border-radius: .8rem;
+            flex-shrink: 0;
+            height: 6.4rem;
+            font-size: 1.7rem;
+            padding: 0 2.2rem;
+        }
+    }
+}
