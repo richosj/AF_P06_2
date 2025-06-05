@@ -1,4 +1,8 @@
-
+@use 'sass:map';
+@use 'sass:math';
+@use '../utils/variables' as *;
+@use '../utils/functions' as *;
+@use '../utils/mixins' as *;
 .badge{
     display: inline-flex;
     align-items: center;

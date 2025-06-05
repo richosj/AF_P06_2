@@ -1,0 +1,36 @@
+
+
+@use 'sass:map';
+@use 'sass:math';
+@use '../utils/variables' as *;
+@use '../utils/functions' as *;
+@use '../utils/mixins' as *;
+
+.datepicker{
+    height: 4rem;
+    background: #fff url(#{$image-path}/icon/ico_calendar.svg) no-repeat right 1.5rem center;
+    border: 1px solid #c6c6c6;
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    font-size: 1.4rem;
+    color: #333;
+    position: relative;
+    
+    &:focus{
+        border-color: #007bff;
+        outline: none;
+    }
+}
+
+.date-range{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    .date-range-separator{
+        font-size: 1.5rem;
+        color: #333;
+    }
+    .datepicker{
+        width: calc(50% - 0.5rem);
+    }
+}

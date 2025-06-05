@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   const isGhPages = mode === 'ghpages'
   const isLocalBuild = mode === 'localbuild'
-  const projectName = 'AF_P06'
+  const projectName = 'AF_P06_2'
 
   const basePath = isLocalBuild
   ? './'
@@ -19,7 +19,7 @@ export default defineConfig(({ mode }) => {
     ? `/${projectName}/`
     : '/';
 
-  const pagesPath = path.resolve(__dirname, 'src/pages')
+  const pagesPath = path.resolve(__dirname, 'src')
 
   // ✅ 이게 먼저 있어야 함
   const pageFiles = fs.readdirSync(pagesPath)
@@ -58,11 +58,12 @@ export default defineConfig(({ mode }) => {
     publicDir: '../public',
     build: {
       //outDir: '../build',
+      manifest: false,
       outDir: isGhPages ? '../dist' : isLocalBuild ? '../build' : '../dist',
       emptyOutDir: true,
       rollupOptions: {
         input: Object.fromEntries(
-          glob.sync('src/pages/*.html').map(file => {
+          glob.sync('src/*.html').map(file => {
             const name = path.basename(file, '.html')
             return [name, path.resolve(__dirname, file)]
           })
@@ -96,6 +97,23 @@ export default defineConfig(({ mode }) => {
           cssPath: env.VITE_CSS_PATH
         }
       }),
+      {
+        name: 'cleanup-html',
+        closeBundle() {
+          const distPath = path.resolve(__dirname, 'build')
+          const htmlFiles = fs.readdirSync(distPath).filter(f => f.endsWith('.html'))
+
+          htmlFiles.forEach(file => {
+            const filePath = path.join(distPath, file)
+            let content = fs.readFileSync(filePath, 'utf-8')
+            content = content.replace(/ crossorigin/g, '')
+            content = content.replace(/<link rel="modulepreload" [^>]+?>/g, '')
+            fs.writeFileSync(filePath, content)
+          })
+
+          console.log('✅ 빌드 후 modulepreload & crossorigin 제거 완료')
+        }
+      },
       ViteRestart({
         restart: ['vite.config.mjs', 'src/scss/reset.scss'],
       }),

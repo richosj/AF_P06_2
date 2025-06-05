@@ -1,0 +1,149 @@
+<!-- @pageTitle 메인 -->
+<!-- @pageCreated 2025-05-20 -->
+<!-- @pageUpdated 2025-05-21 -->
+<!-- @pageNote .theme-civil(민) .theme-military(군) .theme-police(경) -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {{> meta}}
+</head>
+
+
+<body class="theme-military">
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+    <main id="main">
+        
+        <div class="main-visual-search">
+            <div class="main-top-sch">
+                <div class="inner">
+                <div class="sch-tit">데이터 검색</div>
+                <div class="sch-form-wrap vert">
+                    <div class="sch-input">
+                        <input type="text" class="krds-input xlarge" placeholder="검색어를 입력해주세요." value="" title="검색어 입력">
+                        <button type="button" class="krds-btn xlarge icon ico-search" aria-label="검색">
+                            <span class="sr-only">검색</span>
+                            <i class="svg-icon ico-sch"></i>
+                        </button>
+                    </div>
+                    <!-- <div class="sch-details">
+                        <button class="btn-more-filter" title="검색 상세 조건 열림">
+                            <i class="svg-icon ico-sch-plus"></i>
+                            검색필터
+                        </button>
+                    </div> -->
+                    <dl class="sch-tag">
+                        <dt>추천 검색어</dt>
+                        <dd class="krds-tag-wrap large" aria-live="polite">
+                            <a href="#" class="krds-btn-tag link">안전보건교육</a>
+                            <a href="#" class="krds-btn-tag link">퇴직금계산기</a>
+                            <a href="#" class="krds-btn-tag link">실업인정신청</a>
+                            <a href="#" class="krds-btn-tag link">중간정산</a>
+                            <a href="#" class="krds-btn-tag link">국민 내일 배움</a>
+                        </dd>
+                    </dl>
+                </div>
+                </div>
+            </div>
+            <div class="background"></div>
+        </div>
+        <!-- //main-visual-search -->
+
+        <div class="main-sec main-news">
+            <div class="inner">
+                <h3 class="main-sec-title">뉴스·소식</h3>
+                <div class="main-news-grid">
+                    <div class="main-news-list">
+                        <div class="hgroup">
+                            <h4>공지사항</h4>
+                            <a href="#" class="link">더보기 <i class="svg-icon ico-plus"></i></a>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <span class="news-subject"><em>[안전보건교육 참석 안내]</em>안전보건교육 참석 안내</span>
+                                    <span class="news-date">2025.05.22</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="news-subject"><em>[안전보건교육 참석 안내]</em>안전보건교육 참석 안안전보건교육 참석 안내안전보건교육 참석 안내안전보건교육 참석 안내안전보건교육 참석 안내안전보건교육 참석 안내안전보건교육 참석 안내안전보건교육 참석 안내내</span>
+                                    <span class="news-date">2025.05.22</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="news-subject"><em>[안전보건교육 참석 안내]</em>안전보건교육 참석 안내</span>
+                                    <span class="news-date">2025.05.22</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="news-subject"><em>[안전보건교육 참석 안내]</em>안전보건교육 참석 안내</span>
+                                    <span class="news-date">2025.05.22</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="news-subject"><em>[안전보건교육 참석 안내]</em>안전보건교육 참석 안내</span>
+                                    <span class="news-date">2025.05.22</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="main-news-banner">
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //main-news -->
+        
+        <div class="main-sec main-jump">
+            <div class="inner">
+                <div class="main-jump-grid">
+                    <a href="#" class="main-jump-item">
+                        <div class="icon"><img src="/assets/images/main/jump-icon-1.png" alt=""></div>
+                        <div class="desc">
+                            <strong>데이터 목록 조회</strong>
+                            <div>민군경 활용시스템에서 활용하고 있는 데이터를 조회할<br>수 있습니다.</div>
+                            <div class="arrow">자세히보기<i class="svg-icon ico-more"></i></div>
+                        </div>
+                    </a>
+                    <a href="#" class="main-jump-item">
+                        <div class="icon"><img src="/assets/images/main/jump-icon-2.png" alt=""></div>
+                        <div class="desc">
+                            <strong>OPEN API 활용신청</strong>
+                            <div>민군경 활용시스템에서 제공하는 데이터 중 일부를 다른 <br>곳에서도 활용할 수 있게 API를 신청할 수 있습니다.</div>
+                            <div class="arrow">자세히보기<i class="svg-icon ico-more"></i></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- //main-jump -->
+    </main>
+    <!-- //main -->
+    <!-- footer -->
+    {{> footer}}
+    <!-- //footer -->
+     
+    <!-- 통합검색 상세 조건 -->
+    {{> search-detail}}
+    <!-- //통합검색 상세 조건 -->
+
+    <script type="module" src="/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const mainVisualSearch = document.querySelector('.main-visual-search');
+            const background = mainVisualSearch.querySelector('.background');
+
+            background.classList.add('init');
+
+            
+        })
+    </script>
+</body>
+
+</html>

@@ -6,30 +6,54 @@
 @use '../utils/mixins' as *;
 
 .icon-lab{
-    background: url(#{$image-path}/icon-lab@12x16.png) no-repeat 50% 50%;
+    background: url(#{$image-path}/icon/icon-lab@12x16.png) no-repeat 50% 50%;
     display: inline-block;
     width: 1.2rem;
     height: 1.6rem;
 }
 
 .icon-grid{
-    background: url(#{$image-path}/icon-grid@14x14.png) no-repeat 50% 50%;
+    background: url(#{$image-path}/icon/icon-grid@14x14.png) no-repeat 50% 50%;
     display: inline-block;
     width: 1.4rem;
     height: 1.4rem;    
 }
 
 [aria-pressed="true"] .icon-grid{
-    background-image: url(#{$image-path}/icon-grid-active@14x14.png);
+    background-image: url(#{$image-path}/icon/icon-grid-active@14x14.png);
 }
 
 .icon-list{
-    background: url(#{$image-path}/icon-list@14x14.png) no-repeat 50% 50%;
+    background: url(#{$image-path}/icon/icon-list@14x14.png) no-repeat 50% 50%;
     display: inline-block;
     width: 1.4rem;
     height: 1.4rem;
 }
 
 [aria-pressed="true"] .icon-list{
-    background-image: url(#{$image-path}/icon-list-active@14x14.png);
+    background-image: url(#{$image-path}/icon/icon-list-active@14x14.png);
+}
+
+.icon-alarm{
+    background: url(#{$image-path}/icon/icon-alarm@16x16.png) no-repeat 50% 50%;
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.7rem;
+}
+.icon-refresh{
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.2rem;
+    background: url(#{$image-path}/icon/icon-refresh@16x12.png) no-repeat 50% 50%;
+}
+.icon-delete{
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.7rem;
+    forced-color-adjust: none;
+    mask-image: url(#{$image-path}/icon/icon-delete.svg);
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+    
 }

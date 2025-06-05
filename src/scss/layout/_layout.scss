@@ -38,7 +38,7 @@
     .sch-input{
         width: 100%;
         .krds-input{
-            border-color: var(--krds-light-color-border-primary);
+            border-color: var(--brand-color);
             border-width: .3rem;
             font-size: 2.4rem;
             font-weight: 700;
@@ -50,7 +50,7 @@
             border-radius: 0;
         }
         .krds-btn.icon .svg-icon{
-            background-color: #0050d1;
+            background-color: var(--brand-color);
             
         }
     }

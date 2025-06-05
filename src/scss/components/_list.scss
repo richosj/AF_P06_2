@@ -30,6 +30,14 @@
         padding-bottom: 2rem;
         margin-bottom: 2rem;
         border-bottom: 1px solid #c6c6c6;
+        position: relative;
+        &:has(.krds-form-check){
+            .krds-form-check{
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
     }
     &-title{
         white-space: nowrap;
@@ -41,6 +49,10 @@
         width: 100%;
         font-weight: 700;
         font-size: 1.9rem;
+        .badge{
+            vertical-align: baseline;
+            margin-right: .5rem;
+        }
     }
     &-desc{
         white-space: nowrap;

@@ -75,6 +75,5 @@ function initSortToggleComponent(containerSelector = '.sort-type-group') {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  
   initSortToggleComponent();
 });

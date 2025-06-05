@@ -1,0 +1,219 @@
+<!-- @pageTitle DS-SCD-OS-01-001_제공 데이터 목록 -->
+<!-- @pageCreated 2025-05-29 -->
+<!-- @pageUpdated 2025-05-29 -->
+<!-- @pageNote  -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {{> meta}}
+</head>
+
+<body>
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+    
+    <!-- breadcrumb -->
+    {{> breadcrumb }}
+    <!-- breadcrumb -->
+
+    <main id="contents">
+        <div class="page-header">
+            <h2 class="page-header-title">제공 데이터</h2>
+        </div>
+        <!-- //page-header -->
+
+        {{> search-top-box }}
+        <!-- //search-top-box -->
+
+        <div class="page-content">
+            {{> aside}}
+
+            <div class="page-content-body">
+                <div class="search-list-top">
+                    <div class="search-list-result">
+                        검색결과 <b class="total">249</b>건
+                    </div>
+                    <div class="search-list-sort">
+                        
+                        <div class="sort-type-group" data-callback="onSortChange">
+                            <button type="button" class="sort-type-group-item" aria-pressed="true" data-toggle="list" data-toggle-type="grid" title="갤러리형 보기">
+                                <i class="icon-grid" aria-hidden="true"></i>
+                            </button>
+                            <button type="button" class="sort-type-group-item" aria-pressed="false" data-toggle="list" data-toggle-type="list" title="목록형 보기">
+                                <i class="icon-list" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-list-container">
+                    <div class="post-container">
+                        <div class="table table-list">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">순번</th>
+                                        <th scope="col">데이터명</th>
+                                        <th scope="col">유형</th>
+                                        <th scope="col">카테고리</th>
+                                        <th scope="col">제공기관</th>
+                                        <th scope="col">등록일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="num">2</td>
+                                        <td class="subject"><a href="#">업종재분별 어업정보활동 <i class="svg-icon ico-down" aria-hidden="true"></i></a></td>
+                                        <td>JSON+XML</td>
+                                        <td>해상</td>
+                                        <td>해양수산부</td>
+                                        <td class="date">2024-04-01</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- 갤러리일떄는 이 부분까지 포함 -->
+                        <div>
+                            읽고 지우시면됩니다. <br>
+                            현재는 다 나와있는데, 선택에 따라서 테이블형과 갤러리형으로 선택해서 보여주시면됩니다. <br>
+
+                        </div>
+                        <div class="select-all mb-10">
+                            <div class="krds-form-check">
+                                <input type="checkbox" id="chk_all" checked="">
+                                <label for="chk_all">전체선택</label>
+                            </div>
+                        </div>
+                        <ul class="card-list">
+                            <li class="card-item data-card-item">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="card-content">
+                                            <div class="krds-form-check">
+                                                <input type="checkbox" id="chk1" checked="">
+                                                <label for="chk1"></label>
+                                            </div>
+                                            <div class="card-post-sign">
+                                                <span class="card-post-sign-icon"><i class="svg-icon ico-down" aria-hidden="true"></i></span>
+                                                <span class="badge badge-round badge-success">JSON +XML</span>
+                                            </div>
+                                            <a href="#" class="card-title">(개방) 시운전금지해역(개방) 시운전금지해역(개방) 시운전금지해역(개방) 시운전금지해역</a>
+                                            <p class="card-desc">시운전금지해역에 대한 격자번호, 위경도, 상세...</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="card-meta"><i class="icon-lab"></i> 해양공간통합관리시스템</div>
+                                            <div class="card-info-group">
+                                                <div class="card-info flex-grow-1">
+                                                    <dl class="info-item">
+                                                        <dt>등록일</dt>
+                                                        <dd>2025-05-12</dd>
+                                                    </dl>
+                                                    <dl class="info-item">
+                                                        <dt>수정일</dt>
+                                                        <dd>2025-05-12</dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="card-info sm">
+                                                    <dl class="info-item column">
+                                                        <dt>조회</dt>
+                                                        <dd>128</dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card-item data-card-item">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="card-content">
+                                            <div class="krds-form-check">
+                                                <input type="checkbox" id="chk2" checked="">
+                                                <label for="chk2"></label>
+                                            </div>
+                                            <div class="card-post-sign">
+                                                <span class="card-post-sign-icon"><i class="svg-icon ico-down" aria-hidden="true"></i></span>
+                                                <span class="badge badge-round badge-primary">XML+지도</span>
+                                            </div>
+                                            <a href="#" class="card-title">(개방) 시운전금지해역(개방) 시운전금지해역(개방) 시운전금지해역(개방) 시운전금지해역</a>
+                                            <p class="card-desc">시운전금지해역에 대한 격자번호, 위경도, 상세...</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="card-meta"><i class="icon-lab"></i> 해양공간통합관리시스템</div>
+                                            <div class="card-info-group">
+                                                <div class="card-info flex-grow-1">
+                                                    <dl class="info-item">
+                                                        <dt>등록일</dt>
+                                                        <dd>2025-05-12</dd>
+                                                    </dl>
+                                                    <dl class="info-item">
+                                                        <dt>수정일</dt>
+                                                        <dd>2025-05-12</dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="card-info sm">
+                                                    <dl class="info-item column">
+                                                        <dt>조회</dt>
+                                                        <dd>128</dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- pagination -->
+                    {{> pagination}}
+                    <!-- //pagination -->
+                </div>
+                <!-- //search-list-container -->
+            </div>
+            <!-- //page-content-body -->
+        </div>
+        <!-- //page-content -->
+    </main>
+    <!-- //contents -->
+
+    <!-- footer -->
+    {{> footer}}
+    <!-- //footer -->
+
+    <!-- 통합검색 상세 조건 -->
+    {{> search-detail}}
+    <!-- //통합검색 상세 조건 -->
+     
+    <script type="module" src="/js/main.js"></script>
+    <script>
+
+    // sort 콜백
+    const sortSecurityLv = document.querySelectorAll('.sort-security-lv-item');
+    sortSecurityLv.forEach(item => {
+        item.addEventListener('click', function() {
+            item.setAttribute('aria-pressed', !item.getAttribute('aria-pressed'));
+            console.log(item.textContent + ' 클릭됨');
+
+            // 콜백함수 영역
+            
+        });
+    });
+
+    // 전역 콜백 함수
+    function onSortChange(type) {
+        //console.log('정렬 방식 변경됨:', type);
+        if(type === 'grid') {
+            console.log('갤러리형 보기');
+        } else {
+            console.log('목록형 보기');
+        }
+    }
+    </script>
+</body>
+
+</html>

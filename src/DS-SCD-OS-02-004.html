@@ -1,0 +1,158 @@
+<!-- @pageTitle DS-SCD-OS-02-003_OPENAPI 상세  -->
+<!-- @pageCreated 2025-06-04 -->
+<!-- @pageUpdated 2025-06-04 -->
+<!-- @pageNote -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {{> meta}}
+</head>
+
+<body>
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+
+    <!-- breadcrumb -->
+    {{> breadcrumb }}
+    <!-- breadcrumb -->
+    <main id="contents">
+        <div class="page-header">
+            <h2 class="page-header-title">OPEN API</h2>
+        </div>
+        <!-- //page-header -->
+        <div class="page-content">
+            <div class="page-content-body">
+                <header class="page-content-header">
+                    <h3 class="page-content-header-title">OPEN API 활용신청</h3>
+                </header>
+                <div class="view-container">
+
+                    <section>
+                        <h4 class="section-title">Open API 활용 신청 정보</h4>
+                        <div class="view-hgroup">
+                            <h4><span class="badge badge-round badge-primary badge-lg">SHP</span> 유향 유속 관측</h4>
+                            <div class="desc">수로조사를 통해 수집된 유향 및 유속 정보를 제공합니다.</div>
+                            <div class="links">
+                                <strong>서비스 URL :</strong>
+                                <a href="http://api.krds.go.kr/api/service/data/getOpenApiList.do"
+                                    class="krds-btn small link basic" target="_blank" title="새 창 열림">
+                                    <span
+                                        class="underline">http://api.krds.go.kr/api/service/data/getOpenApiList.do</span>
+                                    <i class="svg-icon ico-go"></i>
+                                </a>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h4 class="section-title">Open API 상세</h4>
+                        <table class="meta-table">
+                            <colgroup>
+                                <col style="width: 200px">
+                                <col style="width: 360px">
+                                <col style="width: 200px">
+                                <col style="width: 360px">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>제공기관 <i class="required"></i></th>
+                                    <td>국립해양조사원</td>
+                                    <th>자료 카테고리 구분 <i class="required"></i></th>
+                                    <td>해양 경계</td>
+                                </tr>
+                                <tr>
+                                    <th>관리부서명 <i class="required"></i></th>
+                                    <td>해도수로과</td>
+                                    <th>이용허락범위 <i class="required"></i></th>
+                                    <td>전체공개</td>
+                                </tr>
+                                <tr>
+                                    <th>데이터 포맷 <i class="required"></i></th>
+                                    <td>공간정보(지도)</td>
+                                    <th>API 유형 <i class="required"></i></th>
+                                    <td>REST</td>
+                                </tr>
+                                <tr>
+                                    <th>등록일 <i class="required"></i></th>
+                                    <td>2021-02-14</td>
+                                    <th>갱신일 <i class="required"></i></th>
+                                    <td>2022-02-22</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section>
+                        <h4 class="section-title">활용 정보 입력</h4>
+                        <div class="section-helper">
+                            <p>신청한 API는 2년 동안 사용 가능합니다. 추가로 필요하실 경우 신청 상세에서 연장해주시길 바랍니다.</p>
+                        </div>
+                        <table class="meta-table">
+                            
+                            <tbody>
+                                <tr>
+                                    <th style="width: 140px;">서비스명 <i class="required"></i></th>
+                                    <td style="width:250px"><input type="text" class="krds-input" placeholder="서비스명을 입력하세요."></td>
+                                    <th style="width:140px;">서비스유형 <i class="required"></i></th>
+                                    <td>
+                                        <div class="krds-check-area">
+                                            <div class="krds-form-check">
+                                                <input type="radio" id="service-type-1" name="service-type">
+                                                <label for="service-type-1">웹사이트</label>
+                                            </div>
+                                            <div class="krds-form-check">
+                                                <input type="radio" id="service-type-2" name="service-type">
+                                                <label for="service-type-2">APP(모바일, 솔루션 등)</label>
+                                            </div>
+                                            <div class="krds-form-check">
+                                                <input type="radio" id="service-type-3" name="service-type">
+                                                <label for="service-type-3">기타(QGIS, ArcGIS 등)</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>서비스 도메인 <i class="required"></i></th>
+                                    <td colspan="3"><input type="text" class="krds-input" placeholder="서비스 도메인을 입력하세요."></td>
+                                </tr>
+                                <tr>
+                                    <th>활용 목적 <i class="required"></i></th>
+                                    <td colspan="3"><textarea class="krds-input" placeholder="활용 목적을 입력하세요."></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <div class="footer-actions">
+                        <div class="l">
+                            <a href="#" class="krds-btn tertiary">취소</a>
+                        </div>
+                        <div class="r">
+                            <button type="button" class="krds-btn primary">신청하기</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- //page-content-body -->
+        </div>
+        <!-- //page-content -->
+    </main>
+    <!-- //contents -->
+
+    <!-- footer -->
+    {{> footer}}
+    <!-- //footer -->
+
+    <!-- 통합검색 상세 조건 -->
+    {{> search-detail}}
+    <!-- //통합검색 상세 조건 -->
+
+    <script type="module" src="/js/main.js"></script>
+
+</body>
+
+</html>

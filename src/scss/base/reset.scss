@@ -1,7 +1,32 @@
+@use 'sass:map';
+@use 'sass:math';
+@use '../utils/variables' as *;
+@use '../utils/functions' as *;
+@use '../utils/mixins' as *;
 
 :root {
   --krds-contents-wrap-size: 1200px;
-  --brand-color-primary: #0050d1;
+  --brand-color: #087dec;
+  --theme-logo-url: url(#{$image-path}/common/logo-civil.png);
+  --theme-main-background: url(#{$image-path}/main/main-bg-civil.png);
+}
+/* theme options */
+.theme-civil {
+  --brand-color: #087dec;
+  --theme-logo-url: url(#{$image-path}/common/logo-civil.png);
+  --theme-main-background: url(#{$image-path}/main/main-bg-civil.png);
+}
+
+.theme-military {
+  --brand-color: #00a5e3;
+  --theme-logo-url: url(#{$image-path}/common/logo-military.png);
+  --theme-main-background: url(#{$image-path}/main/main-bg-military.png);
+}
+
+.theme-police {
+  --brand-color: #0b4094;
+  --theme-logo-url: url(#{$image-path}/common/logo-police.png);
+  --theme-main-background: url(#{$image-path}/main/main-bg-police.png);
 }
 
 /* Reset styles */
@@ -81,3 +106,20 @@ body {
     width: #{$i}px;
   }
 }
+@for $i from 1 through 50{
+  .mb-#{$i}{
+    margin-bottom: #{$i}px;
+  }
+  .mt-#{$i}{
+    margin-top: #{$i}px;
+  }
+  .ml-#{$i}{
+    margin-left: #{$i}px;
+  }
+  .mr-#{$i}{
+    margin-right: #{$i}px;
+  }
+}
+
+
+

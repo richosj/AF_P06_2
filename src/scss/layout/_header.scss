@@ -6,10 +6,10 @@
 
 
 #krds-header .header-container .logo{
-    width: 212px;
-    height: 28px;
+    width: 40rem;
+    height: 4.4rem;
     a{
-        background: url(#{$image-path}/logo.png) no-repeat 50% 50%;
+        background: var(--theme-logo-url) no-repeat 50% 50%;
     }
 }
 
@@ -25,3 +25,134 @@
         font-size: 1.5rem;
     }
 }
+
+#krds-header .header-container .btn-navi.alarm{
+    position: relative;
+    &::before{
+        content: '';
+        display: inline-block;
+        width: 1.6rem;
+        height: 1.7rem;
+        background: url(#{$image-path}/icon/icon-alarm@16x16.png) no-repeat 50% 50%;
+    }
+    em{
+        position: absolute;
+        top: -0.3rem;
+        left: 2rem;
+        background-color: var(--brand-color);
+        color: #fff;
+        width: 2rem;
+        height: 1.6rem;
+        border-radius: 2rem;
+        font-weight: 400;
+        font-size: 1.2rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.krds-main-menu{
+    background-color: var(--brand-color);
+    border-bottom: 0;
+    .gnb-menu{
+        justify-content: center;
+        .gnb-main-trigger{
+            color: #fff;
+            &:hover{
+                background-color: #fff;
+                color: var(--brand-color);
+                &::after{
+                    background-color: var(--brand-color);
+                }
+            }
+        }
+    }
+}
+.krds-main-menu .gnb-toggle-wrap{
+    margin-top: 0;
+}
+.krds-main-menu .gnb-menu .gnb-main-trigger::after{
+    background-color: #fff;
+}
+.krds-drop-wrap .drop-menu{
+    padding: 1.8rem;
+}
+.alarm-drop{
+    width: 34.7rem;
+    .alarm-drop-header{
+        border-bottom: 1px solid #c6c6c6;
+        padding-bottom: 1.5rem;
+        margin-bottom: .8rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        .alarm-drop-title{
+            color: #000000;
+            line-height: 1;
+            font-size: 1.9rem;
+            font-weight: 700;
+            padding-bottom: 1.2rem;
+        }
+        .alarm-drop-actions{
+            display: flex;
+            align-items: center;
+            gap:0 1rem;
+            span{
+                color: #555;
+                font-size: 1.5rem;
+            }
+            .alarm-refresh{
+                border-radius: 50%;
+                border: 1px solid #c9c9c9;
+                width: 2.4rem;
+                height: 2.4rem;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+            }
+        }
+    }
+
+    .alarm-list{
+        max-height: 35rem;
+        overflow-y: auto;
+        li{
+            display: flex;
+            align-items: center;
+            gap:0 1rem;
+            padding: 1.6rem;
+            border-radius: 0;
+            background-color: transparent;
+            transition: all .3s ease-in-out;
+            position: relative;
+            padding-right: 4rem;
+            border-bottom: 1px solid #d8d8d8;
+            &:hover{
+                background-color: #eef2f7;
+                border-color: transparent;
+                border-radius: 1.5rem;
+            }
+            i{
+                display: inline-flex;
+                width: 4rem;height: 4rem;
+                border-radius: 50%;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                &.type1{background-image: url(#{$image-path}/icon/icon-alarm-type1@16x16.png);background-color: #a9dab4;}
+                &.type2{background-image: url(#{$image-path}/icon/icon-alarm-type2@15x16.png);background-color: #f7afa1;}
+                &.type3{background-image: url(#{$image-path}/icon/icon-alarm-type3@14x16.png);background-color: #9ed2fa;}
+            }
+            .icon-delete{
+                position: absolute;
+                right: 1.6rem;
+                top: 1.6rem;
+                background-color: #1d1d1d;
+                width: 1.4rem;
+                height: 1.6rem;
+
+            }
+        }
+    }
+}
+

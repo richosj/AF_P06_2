@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>민군경 | 활용시스템</title>
+    <meta name="description" content="민군경 활용시스템" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="민군경 활용시스템" />
+    <meta name="keywords" content="민군경 활용시스템" />
+    <meta name="robots" content="index, follow" />
+    <meta name="google" content="notranslate" />
+    <script src="//cdn.jsdelivr.net/npm/krds-uiux@1.0.3/resources/cdn/krds.min.js"></script>
+  <script type="module" src="./assets/main-yn8BEtYG.js"></script>
+  <link rel="stylesheet" href="./assets/main-la2ayfxq.css">
+</head>
+
+<body>
+    <style>
+        table{
+            border-collapse: collapse;
+            background: white;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+        table thead tr{    height: 60px;background: #36304a;}
+        table thead th{
+            text-align: center;
+            font-family: OpenSans-Regular;
+            font-size: 18px;
+            color: #fff;
+            line-height: 1.2;
+            font-weight: unset;
+        }
+        table tbody tr {
+            height: 50px;
+        }
+        table td, table th {
+            text-align: center;
+            padding: 0 10px;
+        }
+        tbody tr:hover {
+            color: #555555;
+            background-color: #f5f5f5;
+            cursor: pointer;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .link-page{
+            width: 1200px;
+        }
+        h1{
+            padding-bottom: 2rem;
+        }
+        .search-box {
+            width: 100%;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .search-box input {
+            padding: 0.8rem 1rem;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1.4rem;
+        }
+        .search-box button {
+            margin-left: 1rem;
+            padding: 0.8rem 1.5rem;
+            background-color: #36304a;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .no-results {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.6rem;
+            color: #555;
+            display: none;
+        }
+    </style>
+    <h1>화면목록</h1>
+    
+    <div class="link-page">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="검색어를 입력하세요">
+            <button id="searchButton">검색</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>파일</th>
+                    <th>페이지명</th>
+                    <th>생성일</th>
+                    <th>수정일</th>
+                    <th>비고</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <tr>
+                    <td><a href="./DS-SCD-OS-01-001.html" target="_blank">DS-SCD-OS-01-001.html</a></td>
+                    <td>DS-SCD-OS-01-001_제공 데이터 목록</td>
+                    <td>2025-05-29</td>
+                    <td>2025-05-29</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="./DS-SCD-OS-01-003.html" target="_blank">DS-SCD-OS-01-003.html</a></td>
+                    <td>DS-SCD-OS-01-003_제공 데이터 상세</td>
+                    <td>2025-05-29</td>
+                    <td>2025-05-29</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="./DS-SCD-OS-01-004.html" target="_blank">DS-SCD-OS-01-004.html</a></td>
+                    <td>DS-SCD-OS-01-003_제공 데이터 상세</td>
+                    <td>2025-05-29</td>
+                    <td>2025-05-29</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="./guide.html" target="_blank">guide.html</a></td>
+                    <td>가이드</td>
+                    <td>2025-05-12</td>
+                    <td>2025-05-12</td>
+                    <td>가이드 구성</td>
+                </tr>
+                <tr>
+                    <td><a href="./index.html" target="_blank">index.html</a></td>
+                    <td>메인</td>
+                    <td>2025-05-20</td>
+                    <td>2025-05-21</td>
+                    <td>.theme-civil(민) .theme-military(군) .theme-police(경)</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="no-results" id="noResults">검색 결과가 없습니다.</div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+            const tableBody = document.getElementById('tableBody');
+            const noResults = document.getElementById('noResults');
+            const rows = tableBody.querySelectorAll('tr');
+            
+            function performSearch() {
+                const searchTerm = searchInput.value.toLowerCase();
+                let resultsFound = false;
+                
+                rows.forEach(row => {
+                    const text = row.textContent.toLowerCase();
+                    if (text.includes(searchTerm)) {
+                        row.style.display = '';
+                        resultsFound = true;
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+                
+                if (resultsFound) {
+                    noResults.style.display = 'none';
+                } else {
+                    noResults.style.display = 'block';
+                }
+            }
+            
+            searchButton.addEventListener('click', performSearch);
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

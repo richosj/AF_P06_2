@@ -49,6 +49,8 @@ $table-tbody-bg-success: rgba(#267337,0.1);
 
 .table-list{
     table{
+        //table-layout: fixed;
+        table-layout: auto;
         thead{
             th{
                 height: 5.8rem;
@@ -62,10 +64,22 @@ $table-tbody-bg-success: rgba(#267337,0.1);
                 font-weight: 400;
                 color: #555555;
             }
+            .num{
+                text-align: center;
+                width: 100px;
+            }
             .subject{
                 text-align: left;
                 font-weight: 700;
                 color: #000;
+                a{
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0 .7rem;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
             }
         }
     }
@@ -99,3 +113,34 @@ $table-tbody-bg-success: rgba(#267337,0.1);
         //padding-left: 2rem;
     }
 }
+
+
+#dataTable{border-top: 1px solid #000;}
+.gridjs-wrapper{
+    border-radius: 0;
+    border: 0;
+}
+.gridjs-container{
+    padding: 0;
+}
+.gridjs-table{
+    table-layout: fixed;
+}
+.gridjs-wrapper:nth-last-of-type(2){
+    border-radius: 0;
+}
+
+th.gridjs-th{
+    font-size: 1.7rem;
+}
+th.gridjs-th .gridjs-th-content{
+    text-align: center;
+    color: #212121;
+}
+.gridjs-tbody .gridjs-td {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.7rem;
+    text-align: center;
+    //height: 5.8rem;
+  }
