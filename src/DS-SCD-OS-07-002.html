@@ -1,0 +1,157 @@
+<!-- @pageTitle DS-SCD-OS-07-002_데이터 상세 -->
+<!-- @pageCreated 2025-06-09 -->
+<!-- @pageUpdated 2025-06-09 -->
+<!-- @pageNote 관리자 화면 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {{> meta}}
+</head>
+
+<body>
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+
+    <!-- breadcrumb -->
+    {{> breadcrumb }}
+    <!-- breadcrumb -->
+    <main id="contents">
+        <div class="page-header">
+            <h2 class="page-header-title">데이터</h2>
+        </div>
+        <!-- //page-header -->
+        <div class="page-content">
+            <div class="page-content-body">
+                <header class="page-content-header">
+                    <h3 class="page-content-header-title">데이터 상세</h3>
+                </header>
+                <div class="view-container">
+
+                    <div class="bv-fab end">
+                        <button class="krds-btn tertiary"><i class="svg-icon ico-down"></i> 메타 다운로드</button>
+                    </div>
+                    <section>
+                        <h4 class="section-title">데이터 정보</h4>
+                        <table class="meta-table">
+                            <colgroup>
+                                <col style="width: 200px">
+                                <col style="width: 360px">
+                                <col style="width: 200px">
+                                <col style="width: 360px">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>메타데이터 <i class="required"></i></th>
+                                    <td>해군통합해양정보체계</td>
+                                    <th>데이터 공유 범위 <i class="required"></i></th>
+                                    <td>전체 공개</td>
+                                </tr>
+                                <tr>
+                                    <th>데이터 명 <i class="required"></i></th>
+                                    <td>해양정보데이터</td>
+                                    <th>데이터 보안 등급 <i class="required"></i></th>
+                                    <td>내부 전용</td>
+                                </tr>
+                                <tr>
+                                    <th>데이터 설명 <i class="required"></i></th>
+                                    <td>해양정보데이터 설명</td>
+                                    <th>데이터 다운로드 <i class="required"></i></th>
+                                    <td>
+                                        <a href="#" class="krds-btn xsmall secondary">
+                                            <i class="svg-icon ico-down"></i>
+                                            해양정보데이터.xlsx
+                                        </a>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section>
+                        <h4 class="section-title">데이터 이력</h4>
+                        <div>그래프!</div>
+                    </section>
+
+                    <section class="gray">
+                        <h4 class="section-title">데이터 이력 목록</h4>
+                        
+                        <div class="audit-list">
+                            <div class="list-item">
+                                <div class="list-item-subject">유향 유속 관측</div>
+                                <div class="list-item-desc">수로조사를 통해 수집된 유향 및 유속 정보</div>
+                                <div class="list-item-action">
+                                    <a href="#" class="krds-btn small tertiary">바로가기</a>
+                                    <button class="krds-btn small secondary">다운로드</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h4 class="section-title">데이터 이력 목록</h4>
+                        <div class="conts-desc">! 데이터의 일부 내용을 제공하고 있으며, 전체 내용이 필요한 경우 다운로드를 통해 확인할 수 있습니다. </div>
+                        <div class="table-list table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>일련번호</th>
+                                        <th>년도</th>
+                                        <th>구분명</th>
+                                        <th>평가서명</th>
+                                        <th>정점순번</th>
+                                        <th>정점번호</th>
+                                        <th>위도</th>
+                                        <th>경도</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>2016</td>
+                                        <td>해양 경계</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>10543</td>
+                                        <td>37.564234</td>
+                                        <td>127.063491</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h4 class="section-title mt-20">테이블 스크롤 샘플(grid.js사용)</h4>
+                        <div id="dataTable"></div>
+                    </section>
+                    
+                    
+                    <div class="footer-actions">
+                        <div class="l">
+                            <a href="#" class="krds-btn tertiary">목록으로</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- //page-content-body -->
+        </div>
+        <!-- //page-content -->
+    </main>
+    <!-- //contents -->
+
+    <!-- footer -->
+    {{> footer}}
+    <!-- //footer -->
+
+    <!-- 통합검색 상세 조건 -->
+    {{> search-detail}}
+    <!-- //통합검색 상세 조건 -->
+
+    <script type="module" src="/js/main.js"></script>
+    
+</body>
+
+</html>

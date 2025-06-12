@@ -1,0 +1,98 @@
+<!-- @pageTitle DS-SCD-OS-06-005_관심 데이터 -->
+<!-- @pageCreated 2025-06-09 -->
+<!-- @pageUpdated 2025-06-09 -->
+<!-- @pageNote  -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {{> meta}}
+</head>
+
+<body>
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+    
+    <!-- breadcrumb -->
+    {{> breadcrumb }}
+    <!-- breadcrumb -->
+
+    <main id="contents">
+        <div class="page-header">
+            <h2 class="page-header-title">마이페이지</h2>
+        </div>
+        <!-- //page-header -->
+
+        <div class="page-content">
+            {{> lnb}}
+            <div class="page-content-body">
+                <header class="page-content-header">
+                    <h3 class="page-content-header-title">관심 데이터</h3>
+                </header>
+                <div class="post-container">
+                <div class="data-list-section">
+                    <div class="search-list-top">
+                        <div class="search-list-result">
+                            검색결과 <b class="total">249</b>건
+                        </div>
+                        <div class="search-list-sort">
+                            <div class="krds-form-check">
+                                <input type="checkbox" name="chk_all" id="chk_all">
+                                <label for="chk_all">전체선택</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="data-list">
+                        <li class="data-list-item">
+                            <div class="krds-form-check">
+                                <input type="checkbox" name="chk_1" id="chk_1_1">
+                                <label for="chk_1_1">파일 데이터</label>
+                            </div>
+                            <span class="data-list-org">해양경찰청</span>
+                        </li>
+                        <li class="data-list-item">
+                            <div class="krds-form-check">
+                                <input type="checkbox" name="chk_1" id="chk_1_2">
+                                <label for="chk_1_2">파일 데이터</label>
+                            </div>
+                            <span class="data-list-org">해양경찰청</span>
+                        </li>
+                        <li class="data-list-item">
+                            <div class="krds-form-check">
+                                <input type="checkbox" name="chk_1" id="chk_1_3">
+                                <label for="chk_1_3">파일 데이터</label>
+                            </div>
+                            <span class="data-list-org">해양경찰청</span>
+                        </li>
+                    </ul>
+                </div>
+
+                
+                {{> pagination}}
+                <div class="action-fab">
+                    <a href="#" class="krds-btn xsmall primary">관심 데이터 삭제</a>
+                </div>
+                </div>
+                
+            </div>
+            <!-- //page-content-body -->
+        </div>
+        <!-- //page-content -->
+    </main>
+    <!-- //contents -->
+
+    <!-- footer -->
+    {{> footer}}
+    <!-- //footer -->
+
+    <!-- 통합검색 상세 조건 -->
+    {{> search-detail}}
+    <!-- //통합검색 상세 조건 -->
+     
+    <script type="module" src="/js/main.js"></script>
+    
+</body>
+
+</html>

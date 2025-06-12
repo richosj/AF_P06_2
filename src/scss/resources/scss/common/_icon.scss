@@ -285,7 +285,11 @@
 	}
 
 	&.ico-checkbox {
-		@include icon-set(ico_checkbox_checked);     
+		@include icon-set(ico_checkbox_checked);
+	}
+	
+	&.ico-certified{
+		@include icon-set(ico_certified);
 	}
 }
   

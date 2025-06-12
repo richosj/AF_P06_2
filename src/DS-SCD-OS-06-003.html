@@ -1,0 +1,161 @@
+<!-- @pageTitle DS-SCD-OS-06-003_OPEN API 신청 현황 -->
+<!-- @pageCreated 2025-06-09 -->
+<!-- @pageUpdated 2025-06-09 -->
+<!-- @pageNote  -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {{> meta}}
+</head>
+
+<body>
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+    
+    <!-- breadcrumb -->
+    {{> breadcrumb }}
+    <!-- breadcrumb -->
+
+    <main id="contents">
+        <div class="page-header">
+            <h2 class="page-header-title">마이페이지</h2>
+        </div>
+        <!-- //page-header -->
+
+        <div class="page-content">
+            {{> lnb}}
+            <div class="page-content-body">
+                <header class="page-content-header">
+                    <h3 class="page-content-header-title">OPEN API 신청 현황</h3>
+                </header>
+
+                <div class="mypage-search">
+                    <div class="search-row">
+                        <div class="search-col">
+                            <strong>처리상태</strong>
+                            <select name="" id="" class="krds-form-select">
+                                <option value="1">선택</option>
+                            </select>
+                        </div>
+                        <div class="search-col">
+                            <strong>신청 일자</strong>
+                            <div class="date-range">
+                                <input type="text" class="datepicker start" placeholder="YYYY.MM.DD" aria-label="시작일" />
+                                <span class="date-range-separator">-</span>
+                                <input type="text" class="datepicker end" placeholder="YYYY.MM.DD" aria-label="종료일" />
+                            </div>
+                        </div>
+                        <div class="search-col">
+                            <strong>데이터명</strong>
+                            <input id="dataname" class="krds-input" type="text" placeholder="검색어를 입력해주세요.">
+                        </div>
+                        <div class="search-col search-btns">
+                            <button class="krds-btn secondary">초기화</button>
+                            <button class="krds-btn primary"><i class="svg-icon ico-sch"></i>검색</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="open-api">
+                    <div class="open-api-title">나의 신청 현황</div>
+                    <div class="open-api-list">
+                        <div class="status-box all">
+                            <div class="status-label">전체</div>
+                            <div class="status-value">2</div>
+                        </div>
+                        <div class="status-arrow"><i class="svg-icon ico-angle right"></i></div>
+                        <div class="status-box request">
+                            <div class="status-label">신청 <span class="count">0</span></div>
+                            <div class="status-detail">
+                                <span>신청 0건</span>
+                                <span>변경 신청 0건</span>
+                            </div>
+                        </div>
+                        <div class="status-arrow"><i class="svg-icon ico-angle right"></i></div>
+                        <div class="status-box approve">
+                            <div class="status-label">활용(승인) <span class="count">2</span></div>
+                        </div>
+                        <div class="status-arrow"><i class="svg-icon ico-angle right"></i></div>
+                        <div class="status-box end">
+                            <div class="status-label">보류 · 만료 · 중지 <span class="count">0</span></div>
+                            <div class="status-detail">
+                                <span>보류 0건</span>
+                                <span>만료 0건</span>
+                                <span>중지 0건</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-container">
+                    <ul class="card-list">
+                        <li class="card-item data-card-item">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <div class="post-category">
+                                            <i aria-hidden="true"><img src="/assets/images/system/boolen1@18x20.png" alt=""></i>
+                                            <strong>해양환경</strong>
+                                        </div>
+                                    </div>
+                                    <div class="card-content">
+                                        <a href="#" class="card-title"><span class="badge badge-round badge-stblue">shp</span>유향 유속 관측 유향 유속 관측 유향 유속 관측유향 유속 관측유향 유속 관측유향 유속 관측유향 유속 관측</a>
+                                        <p class="card-desc clamp-2">수로조사를 통해 수집된 유향 및 유속 수로조사를 통해 수집된 유향 및 유속 정보수로조사를 통해 수집된 유향 및 유속 정보</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-meta"><i class="icon-lab"></i> 해양공간통합관리시스템</div>
+                                        <div class="card-info-group">
+                                            <div class="card-info flex-grow-1">
+                                                <dl class="info-item">
+                                                    <dt>등록일</dt>
+                                                    <dd>2025-05-12</dd>
+                                                </dl>
+                                                <dl class="info-item">
+                                                    <dt>수정일</dt>
+                                                    <dd>2025-05-12</dd>
+                                                </dl>
+                                            </div>
+                                            <div class="card-info sm">
+                                                <dl class="info-item column">
+                                                    <dt>조회</dt>
+                                                    <dd>128</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-action">
+                                        <button type="button" class="krds-btn btn secondary">활용신청</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+                {{> pagination}}
+                
+                
+            </div>
+            <!-- //page-content-body -->
+        </div>
+        <!-- //page-content -->
+    </main>
+    <!-- //contents -->
+
+    <!-- footer -->
+    {{> footer}}
+    <!-- //footer -->
+
+    <!-- 통합검색 상세 조건 -->
+    {{> search-detail}}
+    <!-- //통합검색 상세 조건 -->
+     
+    <script type="module" src="/js/main.js"></script>
+    
+</body>
+
+</html>

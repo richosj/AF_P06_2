@@ -1,0 +1,48 @@
+@use 'sass:map';
+@use 'sass:math';
+@use '../utils/variables' as *;
+@use '../utils/functions' as *;
+@use '../utils/mixins' as *;
+
+
+
+.box{
+    &-container{
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        padding-top: 2.4rem;
+    }
+    &-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+        gap: 0 2.4rem;
+    }
+    &-col{
+        border: 1px solid #c6c6c6;
+        border-radius: 1.2rem;
+        padding: 3rem;
+        &__hgroup{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            line-height: 1;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid #d8d8d8;
+            margin-bottom: 2rem;
+            strong{
+                font-weight: 500;
+                font-size: 1.9rem;
+            }
+            .action-fab{
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+        &__body{
+
+        }
+    }
+}

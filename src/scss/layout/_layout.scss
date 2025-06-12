@@ -73,6 +73,9 @@
     &:has(.page-content-aside){
         display: flex;
     }
+    &:has(#lnb){
+        display: flex;
+    }
     &-header{
         display: flex;
         justify-content: space-between;
@@ -93,6 +96,12 @@
             }
         }
     }
+}
+
+#lnb{
+    width: 28.2rem;
+    flex-shrink: 0;
+    flex-grow: 0;
 }
 
 .page-content-aside {

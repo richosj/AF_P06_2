@@ -1,0 +1,122 @@
+<!-- @pageTitle DS-SCD-OS-03-004_Q&A 목록-->
+<!-- @pageCreated 2025-06-09 -->
+<!-- @pageUpdated 2025-06-09 -->
+<!-- @pageNote -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {{> meta}}
+</head>
+
+<body>
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+
+    <!-- breadcrumb -->
+    {{> breadcrumb }}
+    <!-- breadcrumb -->
+    <main id="contents">
+        <div class="page-header">
+            <h2 class="page-header-title">Q&A</h2>
+        </div>
+        <!-- //page-header -->
+        <div class="page-content">
+            <div class="page-content-body">
+                
+
+                <div class="search-default">
+                    <div class="input-group">
+                        <strong>검색조건</strong>
+                        <select name="" id="" class="krds-form-select w-100">
+                            <option value="기타">기타</option>
+                            <option value="제목">제목</option>
+                            <option value="내용">내용</option>
+                        </select>
+                        <input type="text" class="krds-input" placeholder="검색어를 입력하세요.">
+                        <button type="button" class="krds-btn secondary"><i class="svg-icon ico-refresh"></i> 초기화</button>
+                        <button type="button" class="krds-btn primary"><i class="svg-icon ico-sch"></i> 검색</button>
+                    </div>
+                </div>
+
+                <div class="search-list-top">
+                    <div class="search-list-result">
+                        검색결과 <b class="total">249</b>건
+                    </div>
+                </div>
+                <div class="post-container">
+                    <div id="qna" class="table table-list">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="col-num">순번</th>
+                                    <th scope="col" class="col-title">제목</th>
+                                    <th scope="col" class="col-category">분류</th>
+                                    <th scope="col" class="col-writer">작성자</th>
+                                    <th scope="col" class="col-date">등록일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-num">1</td>
+                                    <td class="col-title">
+                                        <div class="title-wrap">
+                                            <span class="title-text">시스템 이용 방법에 대해 문의드립니다시스템 이용 방법에 대해 문의드립니다.시스템 이용 방법에 대해 문의드립니다.시스템 이용 방법에 대해 문의드립니다.시스템 이용 방법에 대해 문의드립니다..</span>
+                                            <span class="title-icons">
+                                                <i class="svg-icon ico-certified"></i>
+                                                <i class="svg-icon ico-file"></i>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="col-category">시스템</td>
+                                    <td class="col-writer">홍길동</td>
+                                    <td class="col-date">2024.03.15</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-num">2</td>
+                                    <td class="col-title">
+                                        <div class="title-wrap">
+                                            <span class="title-text">회원가입 관련 문의</span>
+                                            <span class="title-icons">
+                                                <i class="svg-icon ico-certified"></i>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="col-category">회원</td>
+                                    <td class="col-writer">김철수</td>
+                                    <td class="col-date">2024.03.14</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    {{> pagination}}
+
+                    <div class="action-fab">
+                        <a href="#" class="krds-btn medium tertiary">등록</a>
+                    </div>
+    
+                </div>
+
+
+            </div>
+            <!-- //page-content-body -->
+        </div>
+        <!-- //page-content -->
+    </main>
+    <!-- //contents -->
+
+    <!-- footer -->
+    {{> footer}}
+    <!-- //footer -->
+
+    <!-- 통합검색 상세 조건 -->
+    {{> search-detail}}
+    <!-- //통합검색 상세 조건 -->
+
+    <script type="module" src="/js/main.js"></script>
+    
+</body>
+
+</html>

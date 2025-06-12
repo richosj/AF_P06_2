@@ -1,0 +1,150 @@
+<!-- @pageTitle DS-SCD-OS-03-003_FAQ 목록 -->
+<!-- @pageCreated 2025-06-09 -->
+<!-- @pageUpdated 2025-06-09 -->
+<!-- @pageNote -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {{> meta}}
+</head>
+
+<body>
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+
+    <!-- breadcrumb -->
+    {{> breadcrumb }}
+    <!-- breadcrumb -->
+    <main id="contents">
+        <div class="page-header">
+            <h2 class="page-header-title">FAQ</h2>
+        </div>
+        <!-- //page-header -->
+        <div class="page-content">
+            <div class="page-content-body">
+                
+
+                <div class="search-default">
+                    <div class="input-group">
+                        <strong>검색조건</strong>
+                        <select name="" id="" class="krds-form-select w-100">
+                            <option value="기타">기타</option>
+                            <option value="제목">제목</option>
+                            <option value="내용">내용</option>
+                        </select>
+                        <input type="text" class="krds-input" placeholder="검색어를 입력하세요.">
+                        <button type="button" class="krds-btn secondary"><i class="svg-icon ico-refresh"></i> 초기화</button>
+                        <button type="button" class="krds-btn primary"><i class="svg-icon ico-sch"></i> 검색</button>
+                    </div>
+                </div>
+
+                <div class="search-list-top">
+                    <div class="search-list-result">
+                        검색결과 <b class="total">249</b>건
+                    </div>
+                </div>
+                <div class="post-container">
+                    <div id="faq" class="faq-list">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-num">01</span>
+                                <span class="faq-category">회원가입</span>
+                                <span class="faq-title">시스템 이용 방법은 어떻게 되나요?</span>
+                                <i class="svg-icon ico-angle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <div class="answer-content">
+                                    시스템 이용 방법은 다음과 같습니다.<br>
+                                    1. 회원가입을 진행합니다.<br>
+                                    2. 로그인 후 서비스를 이용합니다.<br>
+                                    3. 필요한 기능을 선택하여 사용합니다.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-num">02</span>
+                                <span class="faq-category">계정관리</span>
+                                <span class="faq-title">비밀번호를 잊어버렸을 때는 어떻게 하나요?</span>
+                                <i class="svg-icon ico-angle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <div class="answer-content">
+                                    로그인 화면의 '비밀번호 찾기' 메뉴를 통해 본인인증 후<br>
+                                    새로운 비밀번호를 설정하실 수 있습니다.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-num">03</span>
+                                <span class="faq-category">문의하기</span>
+                                <span class="faq-title">서비스 이용 중 오류가 발생했을 때는 어떻게 해야 하나요?</span>
+                                <i class="svg-icon ico-angle"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <div class="answer-content">
+                                    고객센터(1234-5678)로 연락주시거나<br>
+                                    문의하기 게시판을 통해 문의해 주시면 빠른 시일 내에 답변 드리도록 하겠습니다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{> pagination}}
+    
+                </div>
+
+
+            </div>
+            <!-- //page-content-body -->
+        </div>
+        <!-- //page-content -->
+    </main>
+    <!-- //contents -->
+
+    <!-- footer -->
+    {{> footer}}
+    <!-- //footer -->
+
+    <!-- 통합검색 상세 조건 -->
+    {{> search-detail}}
+    <!-- //통합검색 상세 조건 -->
+
+    <script type="module" src="/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqList = document.getElementById('faq');
+            const faqItems = faqList.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (!question) return;
+
+                question.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // 현재 클릭한 항목이 열려있는지 확인
+                    const isActive = item.classList.contains('active');
+                    
+                    // 현재 항목이 열려있으면 닫기
+                    if (isActive) {
+                        item.classList.remove('active');
+                    } else {
+                        // 다른 열린 항목들 닫기
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.classList.remove('active');
+                            }
+                        });
+                        // 현재 항목 열기
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

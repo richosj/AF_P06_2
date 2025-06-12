@@ -1,0 +1,121 @@
+<!-- @pageTitle DS-SCD-OS-07-004_OPEN API 신청 목록 -->
+<!-- @pageCreated 2025-06-09 -->
+<!-- @pageUpdated 2025-06-09 -->
+<!-- @pageNote 관리자 화면-->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {{> meta}}
+</head>
+
+<body>
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+
+    <!-- breadcrumb -->
+    {{> breadcrumb }}
+    <!-- breadcrumb -->
+    <main id="contents">
+        <div class="page-header">
+            <h2 class="page-header-title">OPEN API 신청 관리</h2>
+        </div>
+        <!-- //page-header -->
+        <div class="page-content">
+            <div class="page-content-body">
+                
+
+                <div class="search-default">
+                    <div class="input-group">
+                        <strong>상태</strong>
+                        <select name="" id="" class="krds-form-select w-100">
+                            <option value="">전체</option>
+                        </select>
+                        <input type="text" class="krds-input" placeholder="검색어를 입력하세요.">
+                        <button type="button" class="krds-btn secondary"><i class="svg-icon ico-refresh"></i> 초기화</button>
+                        <button type="button" class="krds-btn primary"><i class="svg-icon ico-sch"></i> 검색</button>
+                    </div>
+                </div>
+
+                <div class="search-list-top">
+                    <div class="search-list-result">
+                        검색결과 <b class="total">249</b>건
+                    </div>
+                    <div class="search-list-sort">
+                        <button class="krds-btn small secondary">
+                            <i class="svg-icon ico-down"></i>
+                            목록다운로드
+                        </button>
+                    </div>
+                </div>
+                <div class="post-container">
+                    <div id="qna" class="table table-list">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Open API 명</th>
+                                    <th>서비스명</th>
+                                    <th>신청자 ID</th>
+                                    <th>상태</th>
+                                    <th>만료일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>해양공간지도</td>
+                                    <td>해양수산부</td>
+                                    <td>user001</td>
+                                    <td><span class="krds-badge outline-primary">승인</span></td>
+                                    <td>2026-02-24</td>
+                                </tr>
+                                <tr>
+                                    <td>해양공간지도</td>
+                                    <td>해양수산부</td>
+                                    <td>user001</td>
+                                    <td><span class="krds-badge outline-success">신청</span></td>
+                                    <td>2026-02-24</td>
+                                </tr>
+                                <tr>
+                                    <td>해양공간지도</td>
+                                    <td>해양수산부</td>
+                                    <td>user001</td>
+                                    <td><span class="krds-badge outline-danger">만료</span></td>
+                                    <td>2026-02-24</td>
+                                </tr>
+                                <tr>
+                                    <td>해양공간지도</td>
+                                    <td>해양수산부</td>
+                                    <td>user001</td>
+                                    <td><span class="krds-badge outline-warning">보류</span></td>
+                                    <td>2026-02-24</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    {{> pagination}}
+    
+                </div>
+
+
+            </div>
+            <!-- //page-content-body -->
+        </div>
+        <!-- //page-content -->
+    </main>
+    <!-- //contents -->
+
+    <!-- footer -->
+    {{> footer}}
+    <!-- //footer -->
+
+    <!-- 통합검색 상세 조건 -->
+    {{> search-detail}}
+    <!-- //통합검색 상세 조건 -->
+
+    <script type="module" src="/js/main.js"></script>
+    
+</body>
+
+</html>

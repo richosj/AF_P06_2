@@ -55,5 +55,34 @@
     mask-size: 100%;
     mask-repeat: no-repeat;
     mask-position: 50% 50%;
-    
+}
+
+.ico-certified{
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.7rem;
+    mask-image: url(#{$image-path}/icon/ico_certified.svg);
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+}
+
+.ico-exclamation{
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.7rem;
+    mask-image: url(#{$image-path}/icon/ico_exclamation.svg);
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+}
+
+.ico-emergency{
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.7rem;
+    mask-image: url(#{$image-path}/icon/ico_emergency.svg);
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
 }

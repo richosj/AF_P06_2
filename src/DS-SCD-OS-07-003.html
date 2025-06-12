@@ -1,0 +1,90 @@
+<!-- @pageTitle DS-SCD-OS-07-003_데이터 통계 -->
+<!-- @pageCreated 2025-06-09 -->
+<!-- @pageUpdated 2025-06-09 -->
+<!-- @pageNote 관리자 화면 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {{> meta}}
+</head>
+
+<body>
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+
+    <!-- breadcrumb -->
+    {{> breadcrumb }}
+    <!-- breadcrumb -->
+    <main id="contents">
+        <div class="page-header">
+            <h2 class="page-header-title">데이터 통계</h2>
+        </div>
+        <!-- //page-header -->
+        <div class="page-content">
+            <div class="page-content-body">
+                <div class="search-default">
+                    <div class="input-group">
+                        <strong>관리기관</strong>
+                        <select name="" id="" class="krds-form-select w-100">
+                            <option value="">전체</option>
+                        </select>
+                        <strong>자료유형</strong>
+                        <select name="" id="" class="krds-form-select w-100">
+                            <option value="">전체</option>
+                        </select>
+                        <input type="text" class="krds-input" placeholder="검색어를 입력하세요.">
+                        <button type="button" class="krds-btn secondary"><i class="svg-icon ico-refresh"></i> 초기화</button>
+                        <button type="button" class="krds-btn primary"><i class="svg-icon ico-sch"></i> 검색</button>
+                    </div>
+                </div>
+                <div class="box-container">
+                    <div class="box-grid">
+                        <div class="box-col">
+                            <div class="box-col__hgroup">
+                                <strong>분석데이터 조회목록 합계 (상위 10개)</strong>
+                                <div class="action-fab">
+                                    <button class="krds-btn xsmall secondary">
+                                        <i class="svg-icon ico-down"></i>
+                                        목록다운로드
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="box-col__body">
+                                차트차트
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-grid">
+                        <div class="box-col">
+                            <div class="box-col__hgroup">
+                                <strong>분석데이터 관심목록 합계 (상위 10개)</strong>
+                            </div>
+                            <div class="box-col__body">
+                                차트차트
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- //page-content-body -->
+        </div>
+        <!-- //page-content -->
+    </main>
+    <!-- //contents -->
+
+    <!-- footer -->
+    {{> footer}}
+    <!-- //footer -->
+
+    <!-- 통합검색 상세 조건 -->
+    {{> search-detail}}
+    <!-- //통합검색 상세 조건 -->
+
+    <script type="module" src="/js/main.js"></script>
+    
+</body>
+
+</html>

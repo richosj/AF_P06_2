@@ -1,0 +1,234 @@
+<!-- @pageTitle DS-SCD-OS-07-016_Q&A 상세 -->
+<!-- @pageCreated 2025-06-10 -->
+<!-- @pageUpdated 2025-06-10 -->
+<!-- @pageNote 관리자 화면 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {{> meta}}
+</head>
+
+<body>
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+
+    <!-- breadcrumb -->
+    {{> breadcrumb }}
+    <!-- breadcrumb -->
+    <main id="contents">
+        <div class="page-header">
+            <h2 class="page-header-title">Q&A</h2>
+        </div>
+        <!-- //page-header -->
+        <div class="page-content">
+            <div class="page-content-body">
+                <header class="page-content-header">
+                    <h3 class="page-content-header-title">Q&A 상세</h3>
+                </header>
+
+                <div class="view-container">
+                    <div class="view-header">
+                        <h4 class="view-title">활용시스템 정기 점검 안내 문의</h4>
+                        <div class="view-info">
+                            <dl>
+                                <dt>등록일</dt>
+                                <dd>2025-01-03</dd>
+                            </dl>
+                            <dl>
+                                <dt>분류</dt>
+                                <dd>기타</dd>
+                            </dl>
+                            <dl>
+                                <dt>조회수</dt>
+                                <dd>34</dd>
+                            </dl>
+                            <dl>
+                                <dt>작성자</dt>
+                                <dd>홍길동</dd>
+                            </dl>
+                            <dl>
+                                <dt>답변상태</dt>
+                                <dd>
+                                    <span class="krds-badge outline-primary">확인중</span>
+                                    <span class="krds-badge outline-secondary">완료</span>
+                                    <span class="krds-badge outline-danger">대기</span>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                    <div class="view-attach">
+                        <dl>
+                            <dt>첨부파일</dt>
+                            <dd>
+                                <ul class="file-list">
+                                    <li>
+                                        <a href="#" class="file-download">
+                                            <i class="svg-icon ico-file"></i>
+                                            공지사항 안내.hwp
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="file-download">
+                                            <i class="svg-icon ico-file"></i>
+                                            점검 일정표.xlsx
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="file-download">
+                                            <i class="svg-icon ico-file"></i>
+                                            보안 점검 항목.pdf
+                                        </a>
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <div class="view-content">
+                        질문입니다. 어떻게 진행해야하나요?
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="comment-title">답글달기</span>
+                            <div class="comment-status">
+                                <label for="comment-status">진행상태</label>
+                                <select id="comment-status" class="krds-form-select small">
+                                    <option>대기</option>
+                                    <option>완료</option>
+                                    <option>보류</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="comment-body">
+                            <div class="comment-file">
+                                <div class="file-upload">
+                                    <input type="file" id="file-upload" class="file-upload-input" multiple>
+                                    <label for="file-upload" class="file-upload-label">
+                                        <i class="svg-icon ico-upload"></i>
+                                        <span>파일 첨부하기</span>
+                                    </label>
+                                    <div class="file-upload-list">
+                                        <div class="file-item">
+                                            <div class="file-info">
+                                                <i class="svg-icon ico-file"></i>
+                                                <span class="file-name">첨부파일명.pdf</span>
+                                            </div>
+                                            <button type="button" class="file-remove">
+                                                <i class="svg-icon ico-del"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <textarea class="krds-input" rows="5" placeholder="답변 내용을 입력하세요."></textarea>
+                        </div>
+                        <div class="comment-footer">
+                            <button type="button" class="krds-btn tertiary xsmall">취소</button>
+                            <button type="button" class="krds-btn secondary xsmall">수정하기</button>
+                            <button type="button" class="krds-btn primary xsmall">답글달기</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-actions">
+                    <div class="l">
+                        <a href="#" class="krds-btn tertiary">목록으로</a>
+                    </div>
+                    <div class="r">
+                        <!-- 삭제하기만 있을시 primary로 변경해주세요. -->
+                        <button class="krds-btn tertiary">삭제하기</button>
+                        <button class="krds-btn primary" onclick="confirmFaqRegistration()">FAQ 등록</button>
+                        <button class="krds-btn primary open-modal" style="width:1px;height:1px;overflow:hidden;position:absolute;top:-9999px;left:-9999px;" data-target="modal_security_level" id="toggler">팝업띄우기용</button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- //page-content-body -->
+        </div>
+        <!-- //page-content -->
+    </main>
+    <!-- //contents -->
+
+    <!-- footer -->
+    {{> footer}}
+    <!-- //footer -->
+
+    <!-- 통합검색 상세 조건 -->
+    {{> search-detail}}
+    <!-- //통합검색 상세 조건 -->
+    <script type="module" src="/js/main.js"></script>
+
+    <section id="modal_security_level" class="krds-modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- modal title -->
+                <div class="modal-header">
+                    <h2 class="modal-title">FAQ 등록</h2>
+                </div>
+                <!-- //modal title -->
+                <!-- modal contents -->
+                <div class="modal-conts">
+                    <div class="conts-area meta-table">
+                        <table>
+                            <colgroup>
+                                <col style="width: 15%;">
+                                <col style="width: 85%;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>제목</th>
+                                    <td>
+                                        <input type="text" class="krds-input" placeholder="제목을 입력하세요.">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>질문</th>
+                                    <td>
+                                        <textarea name="" id="" class="krds-input" rows="10" placeholder="내용을 입력하세요."></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>답변</th>
+                                    <td>
+                                        <textarea name="" id="" class="krds-input" rows="10" placeholder="내용을 입력하세요."></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- //modal contents -->
+                <!-- modal btn -->
+                <div class="modal-btn btn-wrap">
+                    <button type="button" class="krds-btn medium tertiary close-modal">취소</button>
+                    <button type="button" class="krds-btn medium primary close-modal">변경</button>
+                </div>
+                <!-- //modal btn -->
+                <!-- close button -->
+                <button type="button" class="krds-btn medium icon btn-close close-modal">
+                    <span class="sr-only">닫기</span>
+                    <i class="svg-icon ico-popup-close"></i>
+                </button>
+                <!-- //close button -->
+            </div>
+        </div>
+        <div class="modal-back"></div>
+    </section>
+    
+    <script>
+        function confirmFaqRegistration() {
+            if (confirm('해당 Q&A를 FAQ에 등록하시겠습니까?')) {
+                const toggler = document.getElementById('toggler');
+                toggler.click();
+            }
+        }
+    </script>
+    
+
+</body>
+
+</html>

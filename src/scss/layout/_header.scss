@@ -143,14 +143,18 @@
                 &.type2{background-image: url(#{$image-path}/icon/icon-alarm-type2@15x16.png);background-color: #f7afa1;}
                 &.type3{background-image: url(#{$image-path}/icon/icon-alarm-type3@14x16.png);background-color: #9ed2fa;}
             }
-            .icon-delete{
+            .alarm-content{
+                text-align: left;
+            }
+            .del{
                 position: absolute;
                 right: 1.6rem;
                 top: 1.6rem;
+            }
+            .icon-delete{
                 background-color: #1d1d1d;
                 width: 1.4rem;
                 height: 1.6rem;
-
             }
         }
     }

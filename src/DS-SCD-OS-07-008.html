@@ -1,0 +1,129 @@
+<!-- @pageTitle DS-SCD-OS-07-008_접속 통계 -->
+<!-- @pageCreated 2025-06-09 -->
+<!-- @pageUpdated 2025-06-09 -->
+<!-- @pageNote 관리자 화면 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {{> meta}}
+</head>
+
+<body>
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+
+    <!-- breadcrumb -->
+    {{> breadcrumb }}
+    <!-- breadcrumb -->
+    <main id="contents">
+        <div class="page-header">
+            <h2 class="page-header-title">접속 통계</h2>
+        </div>
+        <!-- //page-header -->
+        <div class="page-content">
+            <div class="page-content-body">
+                
+                <div class="box-container">
+                    <div class="box-grid">
+                        <div class="box-col">
+                            <div class="box-col__hgroup">
+                                <strong>사용자 접속 통계 그래프</strong>
+                            </div>
+                            <div class="box-col__body">
+                                그래프
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-grid">
+                        <div class="box-col">
+                            <div class="box-col__hgroup">
+                                <strong>사용자 접속 통계 목록</strong>
+                                <div class="action-fab">
+                                    <button class="krds-btn xsmall secondary">
+                                        <i class="svg-icon ico-down"></i>
+                                        목록다운로드
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="box-col__body">
+                                <div class="krds-table-wrap">
+                                    <table class="tbl col data">
+                                        <thead>
+                                            <tr>
+                                                <th>년도</th>
+                                                <th>1월</th>
+                                                <th>2월</th>
+                                                <th>3월</th>
+                                                <th>4월</th>
+                                                <th>5월</th>
+                                                <th>6월</th>
+                                                <th>7월</th>
+                                                <th>8월</th>
+                                                <th>9월</th>
+                                                <th>10월</th>
+                                                <th>11월</th>
+                                                <th>12월</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>2024</td>
+                                                <td>1,234</td>
+                                                <td>1,567</td>
+                                                <td>1,890</td>
+                                                <td>2,123</td>
+                                                <td>2,456</td>
+                                                <td>2,789</td>
+                                                <td>3,012</td>
+                                                <td>3,345</td>
+                                                <td>3,678</td>
+                                                <td>4,011</td>
+                                                <td>4,344</td>
+                                                <td>4,677</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2023</td>
+                                                <td>987</td>
+                                                <td>1,320</td>
+                                                <td>1,653</td>
+                                                <td>1,986</td>
+                                                <td>2,319</td>
+                                                <td>2,652</td>
+                                                <td>2,985</td>
+                                                <td>3,318</td>
+                                                <td>3,651</td>
+                                                <td>3,984</td>
+                                                <td>4,317</td>
+                                                <td>4,650</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                {{> pagination}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- //page-content-body -->
+        </div>
+        <!-- //page-content -->
+    </main>
+    <!-- //contents -->
+
+    <!-- footer -->
+    {{> footer}}
+    <!-- //footer -->
+
+    <!-- 통합검색 상세 조건 -->
+    {{> search-detail}}
+    <!-- //통합검색 상세 조건 -->
+
+    <script type="module" src="/js/main.js"></script>
+    
+</body>
+
+</html>

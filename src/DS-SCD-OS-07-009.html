@@ -1,0 +1,165 @@
+<!-- @pageTitle DS-SCD-OS-07-009_공지사항 목록 -->
+<!-- @pageCreated 2025-06-09 -->
+<!-- @pageUpdated 2025-06-09 -->
+<!-- @pageNote 관리자 화면 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {{> meta}}
+</head>
+
+<body>
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+
+    <!-- breadcrumb -->
+    {{> breadcrumb }}
+    <!-- breadcrumb -->
+    <main id="contents">
+        <div class="page-header">
+            <h2 class="page-header-title">공지사항</h2>
+        </div>
+        <!-- //page-header -->
+        <div class="page-content">
+            <div class="page-content-body">
+                
+
+                <div class="search-default">
+                    <div class="input-group">
+                        <strong>분류</strong>
+                        <select name="" id="" class="krds-form-select w-100">
+                            <option value="">전체</option>
+                        </select>
+                        <strong>팝업여부</strong>
+                        <select name="" id="" class="krds-form-select w-100">
+                            <option value="전체">전체</option>
+                            <option value="팝업">팝업</option>
+                            <option value="비팝업">비팝업</option>
+                        </select>
+                        <input type="text" class="krds-input" placeholder="검색어를 입력하세요.">
+                        <button type="button" class="krds-btn secondary"><i class="svg-icon ico-refresh"></i> 초기화</button>
+                        <button type="button" class="krds-btn primary"><i class="svg-icon ico-sch"></i> 검색</button>
+                    </div>
+                </div>
+
+                <div class="search-list-top">
+                    <div class="search-list-result">
+                        검색결과 <b class="total">249</b>건
+                    </div>
+                </div>
+                
+                <div class="post-container">
+                    <div class="table table-list">
+                        <table>
+                            <colgroup>
+                                <col width="80">
+                                <col width="450">
+                                <col width="100">
+                                <col width="120">
+                                <col width="150">
+                                <col width="150">
+                                <col width="100">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" class="krds-checkbox">
+                                            <label for="chk_additional_1"></label>
+                                        </div>
+                                    </th>
+                                    <th>제목</th>
+                                    <th>분류</th>
+                                    <th>팝업</th>
+                                    <th>작성자 권한</th>
+                                    <th>등록일</th>
+                                    <th>조회수</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" class="krds-checkbox">
+                                            <label for="chk_additional_1"></label>
+                                        </div>
+                                    </td>
+                                    <td class="subject">
+                                        <a href="#">
+                                            <span class="fixed-icon">
+                                                <i class="svg-icon ico-emergency"></i>
+                                            </span>
+                                            <span class="text">알람 서비스 사용 안내서비스 사용 안내서비스 사용 안내서비스 사용 안내알람 서비스 사용 안내서비스 사용 안내서비스 사용 안내서비스 사용 안내알람 서비스 사용 안내서비스 사용 안내서비스 사용 안내서비스 사용 안내알람 서비스 사용 안내서비스 사용 안내서비스 사용 안내서비스 사용 안내</span>
+                                            <i class="svg-icon ico-file"></i>
+                                        </a>
+                                    </td>
+                                    <td>기타</td>
+                                    <td><span class="krds-badge bg-light-primary">만료</span></td>
+                                    <td>일반 관리자</td>
+                                    <td>2025-01-03</td>
+                                    <td>256</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" class="krds-checkbox">
+                                            <label for="chk_additional_1"></label>
+                                        </div>
+                                    </td>
+                                    <td class="subject"><a href="#">[알림]  알람 서비스 사용 안내서비스 사용 안내서비스 사용 안내서비스 사용 안내알람 서비스 사용 안내서비스 사용 안내서비스 사용 안내서비스 사용 안내알람 서비스 사용 안내서비스 사용 안내서비스 사용 안내서비스 사용 안내알람 서비스 사용 안내서비스 사용 안내서비스 사용 안내서비스 사용 안내</a></td>
+                                    <td>기타</td>
+                                    <td><span class="krds-badge bg-light-danger">표시</span></td>
+                                    <td>일반 관리자</td>
+                                    <td>2025-01-03</td>
+                                    <td>256</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" class="krds-checkbox">
+                                            <label for="chk_additional_1"></label>
+                                        </div>
+                                    </td>
+                                    <td class="subject"><a href="#">[알림]  알람 서비스 사용 안내서비스 사용 안내서비스 사용 안내서비스 사용 안내알람 서비스 사용 안내서비스 사용 안내서비스 사용 안내서비스 사용 안내알람 서비스 사용 안내서비스 사용 안내서비스 사용 안내서비스 사용 안내알람 서비스 사용 안내서비스 사용 안내서비스 사용 안내서비스 사용 안내</a></td>
+                                    <td>기타</td>
+                                    <td><span class="krds-badge bg-light-secondary">미표시</span></td>
+                                    <td>일반 관리자</td>
+                                    <td>2025-01-03</td>
+                                    <td>256</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    {{> pagination}}
+
+                    <div class="action-fab">
+                        <button class="krds-btn medium tertiary">삭제</button>
+                        <a href="#" class="krds-btn medium primary">등록</a>
+                    </div>
+    
+                </div>
+
+
+            </div>
+            <!-- //page-content-body -->
+        </div>
+        <!-- //page-content -->
+    </main>
+    <!-- //contents -->
+
+    <!-- footer -->
+    {{> footer}}
+    <!-- //footer -->
+
+    <!-- 통합검색 상세 조건 -->
+    {{> search-detail}}
+    <!-- //통합검색 상세 조건 -->
+
+    <script type="module" src="/js/main.js"></script>
+    
+</body>
+
+</html>

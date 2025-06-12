@@ -1,0 +1,100 @@
+<!-- @pageTitle DS-SCD-OS-07-014_FAQ 등록 -->
+<!-- @pageCreated 2025-06-10 -->
+<!-- @pageUpdated 2025-06-10 -->
+<!-- @pageNote 관리자 화면 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {{> meta}}
+</head>
+
+<body>
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+
+    <!-- breadcrumb -->
+    {{> breadcrumb }}
+    <!-- breadcrumb -->
+    <main id="contents">
+        <div class="page-header">
+            <h2 class="page-header-title">FAQ</h2>
+        </div>
+        <!-- //page-header -->
+        <div class="page-content">
+            <div class="page-content-body">
+                <header class="page-content-header">
+                    <h3 class="page-content-header-title">FAQ 등록</h3>
+                </header>
+
+                <div class="write-container">
+                    <section>
+                        <h4 class="section-title">상세내용</h4>
+                        <div class="meta-table">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 15%;">
+                                    <col style="width: 35%;">
+                                    <col style="width: 15%;">
+                                    <col style="width: 35%;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>제목 <i class="required"></i></th>
+                                        <td>
+                                            <input type="text" class="krds-input" placeholder="제목을 입력해주세요.">
+                                        </td>
+                                        <th>분류 <i class="required"></i></th>
+                                        <td>
+                                            <select name="" id="" class="krds-form-select">
+                                                <option value="">기타</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>질문 <i class="required"></i></th>
+                                        <td colspan="3">
+                                            <textarea name="" id="" class="krds-input" placeholder="질문을 입력해주세요."></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>답변 <i class="required"></i></th>
+                                        <td colspan="3">
+                                            <textarea name="" id="" class="krds-input" placeholder="답변을 입력해주세요."></textarea>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <div class="footer-actions">
+                        <div class="l">
+                            <button class="krds-btn tertiary">취소</button>
+                        </div>
+                        <div class="r">
+                            <button class="krds-btn primary">등록</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //page-content-body -->
+        </div>
+        <!-- //page-content -->
+    </main>
+    <!-- //contents -->
+
+    <!-- footer -->
+    {{> footer}}
+    <!-- //footer -->
+
+    <!-- 통합검색 상세 조건 -->
+    {{> search-detail}}
+    <!-- //통합검색 상세 조건 -->
+
+    <script type="module" src="/js/main.js"></script>
+    
+</body>
+
+</html>

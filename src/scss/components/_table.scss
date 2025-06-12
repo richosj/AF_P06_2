@@ -49,8 +49,9 @@ $table-tbody-bg-success: rgba(#267337,0.1);
 
 .table-list{
     table{
-        //table-layout: fixed;
-        table-layout: auto;
+        table-layout: fixed;
+        //table-layout: auto;
+        border-collapse: collapse;
         thead{
             th{
                 height: 5.8rem;
@@ -68,17 +69,53 @@ $table-tbody-bg-success: rgba(#267337,0.1);
                 text-align: center;
                 width: 100px;
             }
-            .subject{
-                text-align: left;
-                font-weight: 700;
-                color: #000;
-                a{
+            
+            .subject {
+                max-width: 100%;
+                padding-right: 0;
+                a {
+                    color: #000;
+                    font-weight: 400;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    max-width: 100%;
+                    text-decoration: none;
+                    color: inherit;
+                    &:not(:has(.text)) {
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        display: block;
+                    }
+                }
+                .fixed-icon {
+                    flex-shrink: 0;
+                    margin-right: 4px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .svg-icon{
+                        margin-left: 0;
+                    }
+                }
+                .text {
+                    display: block;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    max-width: 100%;
+                    min-width: 0;
+                    flex: 1 1 auto;
+                }
+                i.svg-icon {
+                    flex-shrink: 0;
+                    margin-left: 4px;
+                    min-width: 18px;
+                    min-height: 18px;
                     display: inline-flex;
                     align-items: center;
-                    gap: 0 .7rem;
-                    &:hover{
-                        text-decoration: underline;
-                    }
+                    
                 }
             }
         }
@@ -90,7 +127,8 @@ $table-tbody-bg-success: rgba(#267337,0.1);
 .meta-table{
     width: 100%;
     border-collapse: collapse;
-    table-layout: fixed;
+    //table-layout: fixed;
+    table-layout: auto;
     border-top: 1px solid #000;
     tr{
         border-bottom: 1px solid #c6c6c6;
@@ -144,3 +182,55 @@ th.gridjs-th .gridjs-th-content{
     text-align: center;
     //height: 5.8rem;
   }
+
+
+  // QnA 테이블
+.table-list {
+    width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    th {
+        background-color: #f8f8f8;
+        font-weight: 500;
+    }
+
+    .col-num { width: 10%; }
+    .col-title { 
+        width: 50%; 
+        text-align: left; 
+    }
+    .col-category { width: 15%; }
+    .col-writer { width: 15%; }
+    .col-date { width: 10%; }
+
+    .title-wrap {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .title-text {
+        display: inline-block;
+        max-width: calc(100% - 60px);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .title-icons {
+        display: flex;
+        gap: 4px;
+        flex-shrink: 0;
+    }
+
+    .svg-icon {
+        width: 16px;
+        height: 16px;
+    }
+} 

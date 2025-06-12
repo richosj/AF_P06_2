@@ -1,0 +1,106 @@
+<!-- @pageTitle DS-SCD-OS-06-002_회원 정보 수정 -->
+<!-- @pageCreated 2025-06-09 -->
+<!-- @pageUpdated 2025-06-09 -->
+<!-- @pageNote  -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {{> meta}}
+</head>
+
+<body>
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+    
+    <!-- breadcrumb -->
+    {{> breadcrumb }}
+    <!-- breadcrumb -->
+
+    <main id="contents">
+        <div class="page-header">
+            <h2 class="page-header-title">마이페이지</h2>
+        </div>
+        <!-- //page-header -->
+
+        <div class="page-content">
+            {{> lnb}}
+            <div class="page-content-body">
+                <header class="page-content-header">
+                    <h3 class="page-content-header-title">회원정보 수정</h3>
+                </header>
+                
+                <div class="view-container">
+                    <section>
+                        <h4 class="section-title">기본정보</h4>
+                        <table class="meta-table">
+                            <colgroup>
+                                <col style="width: 100px;">
+                                <col style="width: auto;">
+                                <col style="width: 110px;">
+                                <col style="width: auto;">
+                            </colgroup>
+                            <tr>
+                                <th>이름 <i class="required"></i></th>
+                                <td><input type="text" class="krds-input" value="홍길동"></td>
+                                <th>사용자권한 <i class="required"></i></th>
+                                <td>일반 관리자</td>
+                            </tr>
+                            <tr>
+                                <th>이메일 <i class="required"></i></th>
+                                <td><input type="text" class="krds-input" value="aaa@naver.com"></td>
+                                <th>사용자등급 <i class="required"></i></th>
+                                <td>
+                                    <select name="" id="" class="krds-form-select">
+                                        <option value="1">1레벨 접근등급</option>
+                                        <option value="2">2레벨 접근등급</option>
+                                        <option value="3">3레벨 접근등급</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <th>전화번호 <i class="required"></i></th>
+                                <td><input type="text" class="krds-input" value="010-0000-0000"></td>
+                                <th>소속기관 <i class="required"></i></th>
+                                <td>
+                                    <div class="input-group">
+                                        <input type="text" class="krds-input" value="국립해양조사원">
+                                        <button type="button" class="krds-btn secondary ml-5"><i class="svg-icon ico-sch"></i>검색</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                        </table>
+                    </section>
+
+                    <div class="footer-actions">
+                        <div class="l"><a href="#" class="krds-btn secondary">취소</a></div>
+                        <div class="r">
+                            <a href="#" class="krds-btn primary">수정</a>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+            <!-- //page-content-body -->
+        </div>
+        <!-- //page-content -->
+    </main>
+    <!-- //contents -->
+
+    <!-- footer -->
+    {{> footer}}
+    <!-- //footer -->
+
+    <!-- 통합검색 상세 조건 -->
+    {{> search-detail}}
+    <!-- //통합검색 상세 조건 -->
+     
+    <script type="module" src="/js/main.js"></script>
+    
+</body>
+
+</html>

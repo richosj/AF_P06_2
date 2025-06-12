@@ -1,0 +1,103 @@
+<!-- @pageTitle DS-SCD-OS-07-005_OPENAPI 신청 상세 -->
+<!-- @pageCreated 2025-06-09 -->
+<!-- @pageUpdated 2025-06-09 -->
+<!-- @pageNote 관리자 화면-->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {{> meta}}
+</head>
+
+<body>
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+
+    <!-- breadcrumb -->
+    {{> breadcrumb }}
+    <!-- breadcrumb -->
+    <main id="contents">
+        <div class="page-header">
+            <h2 class="page-header-title">OPEN API 신청</h2>
+        </div>
+        <!-- //page-header -->
+        <div class="page-content">
+            <div class="page-content-body">
+                <header class="page-content-header">
+                    <h3 class="page-content-header-title">OPEN API 신청 상세</h3>
+                </header>
+
+                <div class="view-container">
+
+                    <section>
+                        <h4 class="section-title">Open API 활용 신청 정보</h4>
+                        <div class="meta-table">
+                            <table>
+                                <tr>
+                                    <th>신청자 아이디 <i class="required"></i></th>
+                                    <td>user001</td>
+                                    <th>신청자 이름 <i class="required"></i></th>
+                                    <td>김유저</td>
+                                </tr>
+                                <tr>
+                                    <th>신청자 아이피 <i class="required"></i></th>
+                                    <td>127.0.0.1:8088</td>
+                                    <th>신청일 <i class="required"></i></th>
+                                    <td>2022-02-22</td>
+                                </tr>
+                                <tr>
+                                    <th>신청 Open API명 <i class="required"></i></th>
+                                    <td>해양공간지도</td>
+                                    <th>활용목적 <i class="required"></i></th>
+                                    <td>해양 API 사용하여 관련 정보를 표출해주는 페이지 제작</td>
+                                </tr>
+                                <tr>
+                                    <th>서비스명 <i class="required"></i></th>
+                                    <td>해양정보서비스플랫폼</td>
+                                    <th>서비스유형 <i class="required"></i></th>
+                                    <td>웹사이트</td>
+                                </tr>
+                                <tr>
+                                    <th>서비스 도메인 <i class="required"></i></th>
+                                    <td>www.test.go.kr</td>
+                                    <th class="text-warning">상태 <i class="required"></i></th>
+                                    <td>신청</td>
+                                </tr>
+                                <tr>
+                                    <th>만료일 <i class="required"></i></th>
+                                    <td>2024-02-22</td>
+                                    <th></th>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+
+
+                    <div class="footer-actions">
+                        <div class="l">
+                            <a href="#" class="krds-btn tertiary">목록으로</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //page-content-body -->
+        </div>
+        <!-- //page-content -->
+    </main>
+    <!-- //contents -->
+
+    <!-- footer -->
+    {{> footer}}
+    <!-- //footer -->
+
+    <!-- 통합검색 상세 조건 -->
+    {{> search-detail}}
+    <!-- //통합검색 상세 조건 -->
+
+    <script type="module" src="/js/main.js"></script>
+    
+</body>
+
+</html>

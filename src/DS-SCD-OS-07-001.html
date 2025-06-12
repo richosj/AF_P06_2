@@ -1,0 +1,161 @@
+<!-- @pageTitle DS-SCD-OS-07-001_데이터 보안등급 목록 -->
+<!-- @pageCreated 2025-06-09 -->
+<!-- @pageUpdated 2025-06-09 -->
+<!-- @pageNote 관리자 화면 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {{> meta}}
+</head>
+
+<body>
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+
+    <!-- breadcrumb -->
+    {{> breadcrumb }}
+    <!-- breadcrumb -->
+    <main id="contents">
+        <div class="page-header">
+            <h2 class="page-header-title">데이터 보안등급</h2>
+        </div>
+        <!-- //page-header -->
+        <div class="page-content">
+            <div class="page-content-body">
+                
+
+                <div class="search-default">
+                    <div class="input-group">
+                        <strong>관리기관</strong>
+                        <select name="" id="" class="krds-form-select w-100">
+                            <option value="">전체</option>
+                        </select>
+                        <strong>보안등급</strong>
+                        <select name="" id="" class="krds-form-select w-100">
+                            <option value="">전체</option>
+                        </select>
+                        <input type="text" class="krds-input" placeholder="검색어를 입력하세요.">
+                        <button type="button" class="krds-btn secondary"><i class="svg-icon ico-refresh"></i> 초기화</button>
+                        <button type="button" class="krds-btn primary"><i class="svg-icon ico-sch"></i> 검색</button>
+                    </div>
+                </div>
+
+                <div class="search-list-top">
+                    <div class="search-list-result">
+                        검색결과 <b class="total">249</b>건
+                    </div>
+                </div>
+                <div class="post-container">
+                    <div class="table table-list smll">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>선택</th>
+                                    <th>메타데이터명</th>
+                                    <th>데이터명</th>
+                                    <th>관리기관</th>
+                                    <th>자료유형</th>
+                                    <th>등록일</th>
+                                    <th>수정일</th>
+                                    <th>등록자 ID</th>
+                                    <th>보안등급</th>
+                                    <th>공유범위</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" name="" id="">
+                                            <label for=""></label>
+                                        </div>
+                                    </td>
+                                    <td><a href="#">해군통합해양정보체계</a></td>
+                                    <td>데이터</td>
+                                    <td>해양수산부</td>
+                                    <td>shp</td>
+                                    <td>2023-02-15</td>
+                                    <td>2023-02-15</td>
+                                    <td>user001</td>
+                                    <td>내부 전용</td>
+                                    <td><span class="krds-badge outline-warning">내부공개</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" name="" id="">
+                                            <label for=""></label>
+                                        </div>
+                                    </td>
+                                    <td>해군통합해양정보체계</td>
+                                    <td>데이터</td>
+                                    <td>해양수산부</td>
+                                    <td>shp</td>
+                                    <td>2023-02-15</td>
+                                    <td>2023-02-15</td>
+                                    <td>user001</td>
+                                    <td>내부 전용</td>
+                                    <td><span class="krds-badge outline-primary">외부공개</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" name="" id="">
+                                            <label for=""></label>
+                                        </div>
+                                    </td>
+                                    <td>해군통합해양정보체계</td>
+                                    <td>데이터</td>
+                                    <td>해양수산부</td>
+                                    <td>shp</td>
+                                    <td>2023-02-15</td>
+                                    <td>2023-02-15</td>
+                                    <td>user001</td>
+                                    <td>내부 전용</td>
+                                    <td><span class="krds-badge outline-danger">비공개</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="krds-form-check">
+                                            <input type="checkbox" name="" id="">
+                                            <label for=""></label>
+                                        </div>
+                                    </td>
+                                    <td>해군통합해양정보체계</td>
+                                    <td>데이터</td>
+                                    <td>해양수산부</td>
+                                    <td>shp</td>
+                                    <td>2023-02-15</td>
+                                    <td>2023-02-15</td>
+                                    <td>user001</td>
+                                    <td>내부 전용</td>
+                                    <td><span class="krds-badge outline-success">부분공개</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    {{> pagination}}
+
+                </div>
+            </div>
+            <!-- //page-content-body -->
+        </div>
+        <!-- //page-content -->
+    </main>
+    <!-- //contents -->
+
+    <!-- footer -->
+    {{> footer}}
+    <!-- //footer -->
+
+    <!-- 통합검색 상세 조건 -->
+    {{> search-detail}}
+    <!-- //통합검색 상세 조건 -->
+
+    <script type="module" src="/js/main.js"></script>
+    
+</body>
+
+</html>

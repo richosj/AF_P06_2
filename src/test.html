@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="zoom-control">
+      <button class="zoom-btn" id="zoom-in">+</button>
+      <input type="range" id="zoom-range" min="1" max="10" value="5" step="1" />
+      <button class="zoom-btn" id="zoom-out">−</button>
+    </div>
+      
+      <style>
+      .zoom-control {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40px;
+        height: 200px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+        padding: 10px;
+        user-select: none;
+      }
+      
+      .zoom-btn {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        line-height: 1;
+        margin: 5px 0;
+      }
+      
+      #zoom-range {
+        -webkit-appearance: none;
+        appearance: none;
+        writing-mode: vertical-lr;
+        height: 140px;
+        width: 6px;
+        background: linear-gradient(to top, #007bff 50%, #ddd 50%);
+        border-radius: 3px;
+        cursor: pointer;
+        margin: 5px 0;
+        transform: rotate(180deg); /* 위가 max되도록 */
+      }
+      
+      /* Chrome, Safari */
+      #zoom-range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 14px;
+        height: 14px;
+        background: #007bff;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+      }
+      
+      /* Firefox */
+      #zoom-range::-moz-range-thumb {
+        width: 14px;
+        height: 14px;
+        background: #007bff;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      
+      #zoom-range::-moz-range-track {
+        background: transparent;
+        border: none;
+      }
+      </style>
+      
+      <script>
+      const range = document.getElementById('zoom-range');
+      const zoomIn = document.getElementById('zoom-in');
+      const zoomOut = document.getElementById('zoom-out');
+      
+      function updateSliderGradient() {
+        const min = parseInt(range.min);
+        const max = parseInt(range.max);
+        const val = parseInt(range.value);
+        const percent = ((val - min) / (max - min)) * 100;
+        //range.style.background = `linear-gradient(to top, #007bff ${percent}%, #ddd ${percent}%)`;
+        range.style.background = `linear-gradient(to bottom, #007bff ${percent}%, #ddd ${percent}%)`;
+      }
+      
+      zoomIn.addEventListener('click', () => {
+        const val = parseInt(range.value);
+        if (val < parseInt(range.max)) {
+          range.value = val + 1;
+          updateSliderGradient();
+        }
+      });
+      
+      zoomOut.addEventListener('click', () => {
+        const val = parseInt(range.value);
+        if (val > parseInt(range.min)) {
+          range.value = val - 1;
+          updateSliderGradient();
+        }
+      });
+      
+      range.addEventListener('input', updateSliderGradient);
+      
+      // 초기화
+      updateSliderGradient();
+      </script>
+      
+</body>
+</html>

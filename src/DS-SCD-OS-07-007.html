@@ -1,0 +1,149 @@
+<!-- @pageTitle DS-SCD-OS-07-007_사용자 정보 상세 -->
+<!-- @pageCreated 2025-06-09 -->
+<!-- @pageUpdated 2025-06-09 -->
+<!-- @pageNote 관리자 화면-->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {{> meta}}
+</head>
+
+<body>
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+
+    <!-- breadcrumb -->
+    {{> breadcrumb }}
+    <!-- breadcrumb -->
+    <main id="contents">
+        <div class="page-header">
+            <h2 class="page-header-title">사용자</h2>
+        </div>
+        <!-- //page-header -->
+        <div class="page-content">
+            <div class="page-content-body">
+                <header class="page-content-header">
+                    <h3 class="page-content-header-title">사용자 상세</h3>
+                </header>
+
+                <div class="view-container">
+
+                    <section>
+                        <h4 class="section-title">정보</h4>
+                        <div class="meta-table">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 15%;">
+                                    <col style="width: 35%;">
+                                    <col style="width: 15%;">
+                                    <col style="width: 35%;">
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <th>로그인 ID <i class="required"></i></th>
+                                    <td>user001</td>
+                                    <th>사용자명 <i class="required"></i></th>
+                                    <td>홍길동</td>
+                                </tr>
+                                <tr>
+                                    <th>사용자 아이피 <i class="required"></i></th>
+                                    <td>127.0.0.1:8088</td>
+                                    <th>등록일 <i class="required"></i></th>
+                                    <td>2022-02-22</td>
+                                </tr>
+                                <tr>
+                                    <th>연락처 <i class="required"></i></th>
+                                    <td>010-0000-0000</td>
+                                    <th>부서명 <i class="required"></i></th>
+                                    <td>해양수산부</td>
+                                </tr>
+                                <tr>
+                                    <th>직위 <i class="required"></i></th>
+                                    <td>과장</td>
+                                    <th>보안등급 <i class="required"></i></th>
+                                    <td>내부전용</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+
+                    <div class="footer-actions">
+                        <div class="l">
+                            <a href="#" class="krds-btn tertiary">취소</a>
+                        </div>
+                        <div class="r">
+                            <button class="krds-btn primary open-modal" data-target="modal_security_level">보안등급 변경</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //page-content-body -->
+        </div>
+        <!-- //page-content -->
+    </main>
+    <!-- //contents -->
+
+    <!-- footer -->
+    {{> footer}}
+    <!-- //footer -->
+
+    <!-- 통합검색 상세 조건 -->
+    {{> search-detail}}
+    <!-- //통합검색 상세 조건 -->
+
+    <script type="module" src="/js/main.js"></script>
+    <section id="modal_security_level" class="krds-modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- modal title -->
+                <div class="modal-header">
+                    <h2 class="modal-title">
+                        사용자 보안등급 변경
+                    </h2>
+                </div>
+                <!-- //modal title -->
+                <!-- modal contents -->
+                <div class="modal-conts">
+                    <div class="conts-area meta-table">
+                        <table>
+                            <colgroup>
+                                <col style="width: 15%;">
+                                <col style="width: 85%;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>보안등급</th>
+                                    <td>
+                                        <select name="" id="" class="krds-form-select">
+                                            <option value="">내부전용</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- //modal contents -->
+                <!-- modal btn -->
+                <div class="modal-btn btn-wrap">
+                    <button type="button" class="krds-btn medium tertiary close-modal">취소</button>
+                    <button type="button" class="krds-btn medium primary close-modal">변경</button>
+                </div>
+                <!-- //modal btn -->
+                <!-- close button -->
+                <button type="button" class="krds-btn medium icon btn-close close-modal">
+                    <span class="sr-only">닫기</span>
+                    <i class="svg-icon ico-popup-close"></i>
+                </button>
+                <!-- //close button -->
+            </div>
+        </div>
+        <div class="modal-back in"></div>
+    </section>
+</body>
+
+</html>

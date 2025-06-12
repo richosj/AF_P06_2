@@ -1,0 +1,194 @@
+<!-- @pageTitle DS-SCD-OS-06-004_OPEN API 신청 현황 상세 -->
+<!-- @pageCreated 2025-06-09 -->
+<!-- @pageUpdated 2025-06-09 -->
+<!-- @pageNote  -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {{> meta}}
+</head>
+
+<body>
+    <!-- header -->
+    {{> header}}
+    <!-- //header -->
+
+    <!-- breadcrumb -->
+    {{> breadcrumb }}
+    <!-- breadcrumb -->
+
+    <main id="contents">
+        <div class="page-header">
+            <h2 class="page-header-title">마이페이지</h2>
+        </div>
+        <!-- //page-header -->
+
+        <div class="page-content">
+            {{> lnb}}
+            <div class="page-content-body">
+                <header class="page-content-header">
+                    <h3 class="page-content-header-title">OPEN API 신청 현황 상세</h3>
+                </header>
+
+                <div class="view-container">
+
+                    <section>
+                        <h4 class="section-title">Open API 정보</h4>
+                        <div class="view-hgroup">
+                            <h4><span class="badge badge-round badge-primary badge-lg">SHP</span> 유향 유속 관측</h4>
+                            <div class="desc">수로조사를 통해 수집된 유향 및 유속 정보를 제공합니다.</div>
+                            <div class="links">
+                                <strong>서비스 URL :</strong>
+                                <a href="http://api.krds.go.kr/api/service/data/getOpenApiList.do"
+                                    class="krds-btn small link basic" target="_blank" title="새 창 열림">
+                                    <span
+                                        class="underline">http://api.krds.go.kr/api/service/data/getOpenApiList.do</span>
+                                    <i class="svg-icon ico-go"></i>
+                                </a>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h4 class="section-title">Open API 상세</h4>
+                        <table class="meta-table">
+                            <colgroup>
+                                <col style="width: 200px">
+                                <col style="width: 360px">
+                                <col style="width: 200px">
+                                <col style="width: 360px">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>제공기관 <i class="required"></i></th>
+                                    <td>국립해양조사원</td>
+                                    <th>자료 카테고리 구분 <i class="required"></i></th>
+                                    <td>해양 경계</td>
+                                </tr>
+                                <tr>
+                                    <th>관리부서명 <i class="required"></i></th>
+                                    <td>해도수로과</td>
+                                    <th>이용허락범위 <i class="required"></i></th>
+                                    <td>전체공개</td>
+                                </tr>
+                                <tr>
+                                    <th>데이터 포맷 <i class="required"></i></th>
+                                    <td>공간정보(지도)</td>
+                                    <th>API 유형 <i class="required"></i></th>
+                                    <td>REST</td>
+                                </tr>
+                                <tr>
+                                    <th>등록일 <i class="required"></i></th>
+                                    <td>2021-02-14</td>
+                                    <th>갱신일 <i class="required"></i></th>
+                                    <td>2022-02-22</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section>
+                        <h4 class="section-title">상세기능</h4>
+
+                        <div class="tab line full">
+                            <ul>
+                                <li role="tab" aria-selected="true" class="active">
+                                    <button type="button" class="btn-tab">레이어 목록 요청 <i class="sr-only">선택됨</i></button>
+                                </li>
+                                <li aria-selected="false">
+                                    <button type="button" class="btn-tab">레이어 호출 </button>
+                                </li>
+                                <li aria-selected="false">
+                                    <button type="button" class="btn-tab">레이어 호출 </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="deep-section">
+                            <div class="deep-section-title"><strong>요청변수(Request Parameter)</strong></div>
+                            <div class="krds-table-wrap">
+                                <table class="tbl col data">
+                                    <thead>
+                                        <tr>
+                                            <th>항목명(영문)</th>
+                                            <th>항목명(국문)</th>
+                                            <th>항목크기</th>
+                                            <th>항목구분</th>
+                                            <th>샘플데이터</th>
+                                            <th>항목설명</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>serviceKey</td>
+                                            <td>서비스키(인증키)</td>
+                                            <td>100</td>
+                                            <td>필수</td>
+                                            <td>인증키(URL Encode)</td>
+                                            <td>발급받은 인증키</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="deep-section">
+                            <div class="deep-section-title"><strong>출력결과(Response Element)</strong></div>
+                            <div class="krds-table-wrap">
+                                <table class="tbl col data">
+                                    <thead>
+                                        <tr>
+                                            <th>항목명(영문)</th>
+                                            <th>항목명(국문)</th>
+                                            <th>항목크기</th>
+                                            <th>항목구분</th>
+                                            <th>샘플데이터</th>
+                                            <th>항목설명</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>serviceKey</td>
+                                            <td>서비스키(인증키)</td>
+                                            <td>100</td>
+                                            <td>필수</td>
+                                            <td>인증키(URL Encode)</td>
+                                            <td>발급받은 인증키</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                    </section>
+
+                    <div class="footer-actions">
+                        <div class="l">
+                            <a href="#" class="krds-btn tertiary">목록으로</a>
+                        </div>
+                        <div class="r">
+                            <button class="krds-btn primary">변경</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //page-content-body -->
+        </div>
+        <!-- //page-content -->
+    </main>
+    <!-- //contents -->
+
+    <!-- footer -->
+    {{> footer}}
+    <!-- //footer -->
+
+    <!-- 통합검색 상세 조건 -->
+    {{> search-detail}}
+    <!-- //통합검색 상세 조건 -->
+
+    <script type="module" src="/js/main.js"></script>
+
+</body>
+
+</html>
