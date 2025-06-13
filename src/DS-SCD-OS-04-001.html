@@ -18,9 +18,9 @@
     <div class="map-container">
         <div class="popup-overlay" id="popupOverlay"></div>
         <div class="popup-layer" id="technology-popup">
+            <button class="popup-close" id="popupClose" type="button"><i class="svg-icon ico-close"></i></button>
             <div class="popup-header">
                 <span>수심 및 지형변화 양상 예측 기술</span>
-                <button class="popup-close" id="popupClose" type="button"><i class="svg-icon ico-close"></i></button>
             </div>
             <div class="popup-content">
               <div class="analysis-setting-box">
@@ -36,6 +36,11 @@
                 <div class="analysis-table">
                   <div class="analysis-subject">수심 해상도</div>
                   <table>
+                    <colgroup>
+                        <col style="width: 70px;">
+                        <col style="width: auto;">
+                        <col style="width: 125px;">
+                    </colgroup>
                     <thead>
                       <tr>
                         <th>선택</th>
@@ -82,29 +87,29 @@
                   </div>
                   <div class="analysis-depth-box">
                     <div class="analysis-subject">수심 해상도</div>
-                    <div class="custom-checkbox"><input type="checkbox" id="depth10"><label for="depth10">10m</label></div>
-                    <div class="custom-checkbox"><input type="checkbox" id="depth50" checked><label for="depth50">50m</label></div>
-                    <div class="custom-checkbox"><input type="checkbox" id="depth100" checked><label for="depth100">100m</label></div>
+                    <div class="krds-form-check"><input type="checkbox" id="" checked /><label for="">10m</label></div>
+                    <div class="krds-form-check"><input type="checkbox" id="" checked /><label for="">50m</label></div>
+                    <div class="krds-form-check"><input type="checkbox" id="" checked /><label for="">100m</label></div>
                   </div>
-                  <button class="analysis-btn" type="button">분석하기</button>
+                  <button class="krds-btn krds-btn-primary large" type="button">분석하기</button>
                 </div>
               </div>
             </div>
         </div>
         <!-- 지도 영역 -->
         <div class="map-area">
-            <div id="map"></div>
+            <div id="map"><img class="test-img" src="./assets/images/map/map.png" alt=""></div>
 
             <!-- 좌상단: 전체레이어 버튼 -->
-            <div class="map-search" style="display: none;">
+            <div class="map-search">
                 <div class="map-search-header">
-                    <div class="map-search-header-top">
-                        <button class="btn-layery-toggle"><i></i>전체레이어</button>
-                        <button class="btn-search-toggle"><i></i>검색</button>
-                    </div>
-                    <div class="map-search-header-bottom">
+                    <strong><i></i>전체레이어</strong>
+                    <button class="btn-search-toggle"><i></i></button>
+                </div>
+                <div class="map-search-input">
+                    <div class="wraps">
                         <input type="text" class="krds-input" placeholder="검색어를 입력해주세요.">
-                        <button class="btn-search"><i class="svg-icon ico-search"></i></button>
+                        <button class="btn-search"><i class="svg-icon ico-sch"></i></button>
                     </div>
                 </div>
 
@@ -114,25 +119,90 @@
                         <button class="btn-reset">초기화 <i class="svg-icon ico-reset"></i></button>
                     </div>
                     <div class="map-search-result-list">
-                        <div class="map-search-result-list-item">
-                            <div class="map-search-result-list-item-title">
-                                <h3>검색결과</h3>
-                            </div>
-                        </div>
+                        <ul class="toggle-list">
+                            <li>
+                                <button>
+                                    <span>즐겨찾기<em>(2)</em></span><i class="svg-icon ico-triangle"></i>
+                                </button>
+                                <div class="layer-item-container">
+                                    <div class="layer-item">
+                                        <div class="layer-icon"><span class="layer-icon ico-layer-1"></span></div>
+                                        <div class="layer-label2">암초</div>
+                                        <div class="layer-actions">
+                                            <div class="layer-actions-left">
+                                                <button class="toggle-favorites" aria-pressed="false"><i class="ico-favorite"></i></button>
+                                                <button class="toggle-tooltip"><i class="svg-icon ico-info"></i></button>
+                                            </div>
+                                            <div class="switch-item">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="layer-item">
+                                        <div class="layer-icon"><span class="layer-icon ico-layer-2"></span></div>
+                                        <div class="layer-label2">영해기점무인도서</div>
+                                        <div class="layer-actions">
+                                            <div class="layer-actions-left">
+                                                <button class="toggle-favorites" aria-pressed="true"><i class="ico-favorite"></i></button>
+                                                <button class="toggle-tooltip"><i class="svg-icon ico-info"></i></button>
+                                            </div>
+                                            <div class="switch-item">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <button>
+                                    <span>해상<em>2</em></span><i class="svg-icon ico-triangle"></i>
+                                </button>
+                                <div class="layer-item-container">
+                                    <div class="layer-item">
+                                        <div class="layer-icon"><span class="layer-icon ico-layer-1"></span></div>
+                                        <div class="layer-label2">암초</div>
+                                        <div class="layer-actions">
+                                            <div class="layer-actions-left">
+                                                <button class="toggle-tooltip"><i class="svg-icon ico-info"></i></button>
+                                            </div>
+                                            <div class="switch-item">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <div class="space"></div>
                     <div class="map-search-result-title">
                         <h3>분석 결과 레이어</h3>
                     </div>
                     <div class="map-search-result-list">
-                        <div class="result-item2">
-                            <i></i>
-                            <span>최적 경로 레이어</span>
-                            <button><i class="svg-icon ico-info"></i></button>
-                            <div class="toggle-switch">
-                                <label for="toggle-switch-1" class="toggle-label"><input type="checkbox" class="toggle-input"></label>
-                            </div>
-                        </div>
+                        <ul>
+                            <li>
+                                <div class="layer-item">
+                                    <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
+                                    <div class="layer-label2">최적 경로 레이어</div>
+                                    <div class="layer-actions">
+                                        <div class="layer-actions-left">
+                                            <button class="toggle-tooltip"><i class="svg-icon ico-info"></i></button>
+                                        </div>
+                                        <div class="switch-item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -498,6 +568,28 @@
             }
         });
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const toggleButtons = document.querySelectorAll('.toggle-list > li > button');
+    
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function() {
+        const listItem = this.parentElement;
+        const isExpanded = listItem.getAttribute('aria-expanded') === 'true';
+        
+        // 현재 클릭된 아이템의 상태 토글
+        listItem.setAttribute('aria-expanded', !isExpanded);
+        
+        // 다른 아이템들은 닫기
+        toggleButtons.forEach(otherButton => {
+            if (otherButton !== this) {
+            otherButton.parentElement.setAttribute('aria-expanded', 'false');
+            }
+        });
+        });
+    });
+    }); 
+
     </script>
 </body>
 </html>
