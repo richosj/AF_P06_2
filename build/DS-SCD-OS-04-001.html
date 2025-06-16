@@ -1,6 +1,6 @@
 <!-- @pageTitle DS-SCD-OS-04-001_지도 -->
 <!-- @pageCreated 2025-06-10 -->
-<!-- @pageUpdated 2025-06-10 -->
+<!-- @pageUpdated 2025-06-13 -->
 <!-- @pageNote 지도 타입1 -->
 <!DOCTYPE html>
 <html lang="ko">
@@ -15,8 +15,8 @@
     <meta name="robots" content="index, follow" />
     <meta name="google" content="notranslate" />
     <script src="./js/krds.min.js"></script>
-  <script type="module" src="./assets/main-Bl8eKaa9.js"></script>
-  <link rel="stylesheet" href="./assets/main-BQ96O4b2.css">
+  <script type="module" src="./assets/main-CdRgkHRo.js"></script>
+  <link rel="stylesheet" href="./assets/main-SKWJWBGG.css">
 </head>
 
 <body>
@@ -26,39 +26,390 @@
     </header>
     <!-- //header -->
     <div class="map-container">
+        <div class="popup-overlay" id="popupOverlay"></div>
+        <div class="popup-layer" id="technology-popup">
+            <button class="popup-close" id="popupClose" type="button"><i class="svg-icon ico-close"></i></button>
+            <div class="popup-header">
+                <span>수심 및 지형변화 양상 예측 기술</span>
+            </div>
+            <div class="popup-content">
+              <div class="analysis-setting-box">
+                <div class="analysis-setting-header">
+                  분석설정
+                  <button class="btn-reset" type="button">초기화 <i class="svg-icon ico-reset"></i></button>
+                </div>
+                <div class="analysis-setting-desc">
+                  원하는 날짜와 분석 데이터를 조정하여 분석할 수 있습니다.
+                </div>
+              </div>
+              <div class="analysis-setting-layout">
+                <div class="analysis-table">
+                  <div class="analysis-subject">수심 해상도</div>
+                  <table>
+                    <colgroup>
+                        <col style="width: 70px;">
+                        <col style="width: auto;">
+                        <col style="width: 125px;">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>선택</th>
+                        <th>설정데이터1</th>
+                        <th>설정기간</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><div class="krds-form-check"><input type="checkbox" id="" checked /><label for=""></label></div></td>
+                        <td>수심 해상도 - 100m</td>
+                        <td>2022-05-24</td>
+                      </tr>
+                      <tr>
+                        <td><div class="krds-form-check"><input type="checkbox" id="" checked /><label for=""></label></div></td>
+                        <td>수심 해상도 - 100m</td>
+                        <td>2022-05-23</td>
+                      </tr>
+                      <tr>
+                        <td><div class="krds-form-check"><input type="checkbox" id="" checked /><label for=""></label></div></td>
+                        <td>수심 해상도 - 50m</td>
+                        <td>2022-05-22</td>
+                      </tr>
+                      <tr>
+                        <td><div class="krds-form-check"><input type="checkbox" id="" checked /><label for=""></label></div></td>
+                        <td>수심 해상도 - 10m</td>
+                        <td>2022-05-21</td>
+                      </tr>
+                      <tr>
+                        <td><div class="krds-form-check"><input type="checkbox" id="" checked /><label for=""></label></div></td>
+                        <td>수심 해상도 - 50m</td>
+                        <td>2022-05-20</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="analysis-side-panel">
+                  <div class="analysis-date-box">
+                    <div class="analysis-subject">기준날짜</div>
+                    <div class="analysis-date-value">
+                      <input type="text" class="datepicker">
+                      <button class="btn-date-remove" type="button">×</button>
+                    </div>
+                  </div>
+                  <div class="analysis-depth-box">
+                    <div class="analysis-subject">수심 해상도</div>
+                    <div class="krds-form-check"><input type="checkbox" id="" checked /><label for="">10m</label></div>
+                    <div class="krds-form-check"><input type="checkbox" id="" checked /><label for="">50m</label></div>
+                    <div class="krds-form-check"><input type="checkbox" id="" checked /><label for="">100m</label></div>
+                  </div>
+                  <button class="krds-btn krds-btn-primary large" type="button">분석하기</button>
+                </div>
+              </div>
+            </div>
+        </div>
         <!-- 지도 영역 -->
         <div class="map-area">
-            <div id="map"></div>
+            <div id="map"><img class="test-img" src="./assets/images/map/map.png" alt=""></div>
 
             <!-- 좌상단: 전체레이어 버튼 -->
-            <div class="map-btn topleft">
-                <button class="btn-layery-toggle"><i></i>전체레이어</button>
-                
+            <div class="map-search">
+                <div class="map-search-header" role="button">
+                    <strong><i></i>전체레이어</strong>
+                    <button class="btn-search-toggle" aria-pressed="false"><i></i></button>
+                </div>
+                <div class="map-search-input">
+                    <div class="wraps">
+                        <input type="text" class="krds-input" placeholder="검색어를 입력해주세요.">
+                        <button class="btn-search"><i class="svg-icon ico-sch"></i></button>
+                    </div>
+                </div>
+
+                <div class="map-search-result">
+                    <div class="map-search-result-title">
+                        <h3>검색결과</h3>
+                        <button class="btn-reset">초기화 <i class="svg-icon ico-reset"></i></button>
+                    </div>
+                    <div class="map-search-result-list">
+                        <ul class="toggle-list">
+                            <li>
+                                <button>
+                                    <span>즐겨찾기<em>(2)</em></span><i class="svg-icon ico-triangle"></i>
+                                </button>
+                                <div class="layer-item-container">
+                                    <div class="layer-item">
+                                        <div class="layer-icon"><span class="layer-icon ico-layer-1"></span></div>
+                                        <div class="layer-label2">암초</div>
+                                        <div class="layer-actions">
+                                            <div class="layer-actions-left">
+                                                <button class="toggle-favorites" aria-pressed="false"><i class="ico-favorite"></i></button>
+                                                <button class="toggle-tooltip" data-text="해저면에서 돌출된 암석으로, 선박의 안전한 항행을 위해 주의가 필요한 지형입니다."><i class="svg-icon ico-info"></i></button>
+                                            </div>
+                                            <div class="switch-item">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="layer-item">
+                                        <div class="layer-icon"><span class="layer-icon ico-layer-2"></span></div>
+                                        <div class="layer-label2">영해기점무인도서</div>
+                                        <div class="layer-actions">
+                                            <div class="layer-actions-left">
+                                                <button class="toggle-favorites" aria-pressed="true"><i class="ico-favorite"></i></button>
+                                                <button class="toggle-tooltip" data-text="영해의 측정을 위한 기준점이 되는 무인도서입니다."><i class="svg-icon ico-info"></i></button>
+                                            </div>
+                                            <div class="switch-item">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <button>
+                                    <span>해상<em>2</em></span><i class="svg-icon ico-triangle"></i>
+                                </button>
+                                <div class="layer-item-container">
+                                    <div class="layer-item">
+                                        <div class="layer-icon"><span class="layer-icon ico-layer-1"></span></div>
+                                        <div class="layer-label2">암초</div>
+                                        <div class="layer-actions">
+                                            <div class="layer-actions-left">
+                                                <button class="toggle-tooltip" data-text="해저면에서 돌출된 암석으로, 선박의 안전한 항행을 위해 주의가 필요한 지형입니다."><i class="svg-icon ico-info"></i></button>
+                                            </div>
+                                            <div class="switch-item">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="space"></div>
+                    <div class="map-search-result-title">
+                        <h3>분석 결과 레이어</h3>
+                    </div>
+                    <div class="map-search-result-list">
+                        <ul class="analysis-layer-list">
+                            <li>
+                                <div class="layer-item">
+                                    <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
+                                    <div class="layer-label2">최적 경로 레이어</div>
+                                    <div class="layer-actions">
+                                        <div class="layer-actions-left">
+                                            <button class="toggle-tooltip" data-text="선박의 안전한 항행을 위한 최적의 경로를 표시합니다."><i class="svg-icon ico-info"></i></button>
+                                        </div>
+                                        <div class="switch-item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="layer-item">
+                                    <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
+                                    <div class="layer-label2">최적 경로 레이어</div>
+                                    <div class="layer-actions">
+                                        <div class="layer-actions-left">
+                                            <button class="toggle-tooltip" data-text="선박의 안전한 항행을 위한 최적의 경로를 표시합니다."><i class="svg-icon ico-info"></i></button>
+                                        </div>
+                                        <div class="switch-item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="layer-item">
+                                    <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
+                                    <div class="layer-label2">최적 경로 레이어</div>
+                                    <div class="layer-actions">
+                                        <div class="layer-actions-left">
+                                            <button class="toggle-tooltip" data-text="선박의 안전한 항행을 위한 최적의 경로를 표시합니다."><i class="svg-icon ico-info"></i></button>
+                                        </div>
+                                        <div class="switch-item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="layer-item">
+                                    <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
+                                    <div class="layer-label2">최적 경로 레이어</div>
+                                    <div class="layer-actions">
+                                        <div class="layer-actions-left">
+                                            <button class="toggle-tooltip" data-text="선박의 안전한 항행을 위한 최적의 경로를 표시합니다."><i class="svg-icon ico-info"></i></button>
+                                        </div>
+                                        <div class="switch-item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="layer-item">
+                                    <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
+                                    <div class="layer-label2">최적 경로 레이어</div>
+                                    <div class="layer-actions">
+                                        <div class="layer-actions-left">
+                                            <button class="toggle-tooltip" data-text="선박의 안전한 항행을 위한 최적의 경로를 표시합니다."><i class="svg-icon ico-info"></i></button>
+                                        </div>
+                                        <div class="switch-item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="layer-item">
+                                    <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
+                                    <div class="layer-label2">최적 경로 레이어</div>
+                                    <div class="layer-actions">
+                                        <div class="layer-actions-left">
+                                            <button class="toggle-tooltip" data-text="선박의 안전한 항행을 위한 최적의 경로를 표시합니다."><i class="svg-icon ico-info"></i></button>
+                                        </div>
+                                        <div class="switch-item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="layer-item">
+                                    <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
+                                    <div class="layer-label2">최적 경로 레이어</div>
+                                    <div class="layer-actions">
+                                        <div class="layer-actions-left">
+                                            <button class="toggle-tooltip" data-text="선박의 안전한 항행을 위한 최적의 경로를 표시합니다."><i class="svg-icon ico-info"></i></button>
+                                        </div>
+                                        <div class="switch-item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="layer-item">
+                                    <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
+                                    <div class="layer-label2">최적 경로 레이어</div>
+                                    <div class="layer-actions">
+                                        <div class="layer-actions-left">
+                                            <button class="toggle-tooltip" data-text="선박의 안전한 항행을 위한 최적의 경로를 표시합니다."><i class="svg-icon ico-info"></i></button>
+                                        </div>
+                                        <div class="switch-item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="layer-item">
+                                    <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
+                                    <div class="layer-label2">최적 경로 레이어</div>
+                                    <div class="layer-actions">
+                                        <div class="layer-actions-left">
+                                            <button class="toggle-tooltip" data-text="선박의 안전한 항행을 위한 최적의 경로를 표시합니다."><i class="svg-icon ico-info"></i></button>
+                                        </div>
+                                        <div class="switch-item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="layer-item">
+                                    <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
+                                    <div class="layer-label2">최적 경로 레이어</div>
+                                    <div class="layer-actions">
+                                        <div class="layer-actions-left">
+                                            <button class="toggle-tooltip" data-text="선박의 안전한 항행을 위한 최적의 경로를 표시합니다."><i class="svg-icon ico-info"></i></button>
+                                        </div>
+                                        <div class="switch-item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="layer-item">
+                                    <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
+                                    <div class="layer-label2">최적 경로 레이어</div>
+                                    <div class="layer-actions">
+                                        <div class="layer-actions-left">
+                                            <button class="toggle-tooltip" data-text="선박의 안전한 항행을 위한 최적의 경로를 표시합니다."><i class="svg-icon ico-info"></i></button>
+                                        </div>
+                                        <div class="switch-item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
+
             <!-- 좌하단: 분석현황 버튼 -->
-            <div class="map-btn bottomleft">
-                <button class="krds-btn outline">분석현황 <span class="badge">5</span></button>
+            <div class="map-bottomleft">
+                <a href="#" class="">분석현황 <span class="count">5</span></a>
             </div>
 
             <!-- 중앙하단: AI 분석 모델 활용 바로가기 -->
-            <div class="map-btn bottomcenter">
-                <button class="krds-btn primary">AI 분석 모델 활용 바로가기</button>
-            </div>
-
-            <!-- 우측: 세로 컨트롤 패널 -->
-            <div class="map-panel right">
-                <button class="krds-btn square">컨트롤1</button>
-                <button class="krds-btn square">컨트롤2</button>
-                <button class="krds-btn square">컨트롤3</button>
-                <button class="krds-btn square">컨트롤4</button>
-                <button class="krds-btn square">컨트롤5</button>
+            <div class="map-bottomcenter">
+                <button id="ai-model-btn" class="ai-model-btn"><i class="ai-icon"></i>AI 분석 모델 활용 바로가기</button>
+                <div id="ai-model-panel" class="ai-model-panel">
+                    <div class="ai-model-arrow"></div>
+                    <ul class="ai-model-list">
+                        <li>AI 분석 모델 현황</li>
+                        <li class="active">수심 및 지형변화 양상 예측 기술</li>
+                        <li>해안선 및 해안 구조물 탐지 기술</li>
+                        <li>AI기반 해양사고 예측</li>
+                        <li>경비/순찰 경로분석 기술</li>
+                        <li>해양사고 대응 및 지원 기술</li>
+                        <li>레이더 신호 분석기술</li>
+                        <li>국제표준 기반 해군작전 지원 해양정보 서비스 기술</li>
+                        <li>수중 음향 분석 및 예측 기술</li>
+                    </ul>
+                </div>
             </div>
 
             <!-- 우하단: 축척/슬라이더 -->
-            <div class="map-scale bottomright">
-                <div class="scale-slider">슬라이더</div>
-                <div class="scale-label">1:25,000</div>
+            <div class="map-bottomright">
+                <div class="map-scale-box">1 : 25,000</div>
+                <div class="zoom-control">
+                    <button class="zoom-btn" id="zoom-in" title="확대"><i class="svg-icon ico-zoom-in"></i></button>
+                    <input type="range" id="zoom-range" min="1" max="10" value="5" step="1" title="축척" />
+                    <button class="zoom-btn" id="zoom-out" title="축소"><i class="svg-icon ico-zoom-out"></i></button>
+                </div>
             </div>
         </div>
         <!-- //지도 영역 -->
@@ -66,15 +417,609 @@
         <!-- 지도 컨트롤 -->
         <div class="map-control-panel">
             <div class="control-group">
-                <h3 class="control-title">지도 컨트롤</h3>
-                <div class="control-content">
-                    <!-- 컨트롤 내용 -->
+                <div class="control-btn-row">
+                    <button class="btn-control-popup" type="button" data-option-target="optionPanel1" aria-pressed="false">
+                        <i class="svg-icon ico-map-bg"></i>
+                        <div class="btn-tooltip">배경지도</div>
+                    </button>
+                    <div class="option-panel" id="optionPanel1">
+                        <div class="option-panel-inner">
+                            <button class="option-close" type="button"><i class="svg-icon ico-close"></i></button>
+                            <div class="option-panel-title">배경지도 선택</div>
+                            <div class="option-panel-content">
+                                <div class="option-panel-item">
+                                    <div class="hgroup">
+                                        <h4>배경색</h4>
+                                    </div>
+                                    <div class="check-bg-color">
+                                        <label class="check-bg-color-item" style="background-color: #fff;">
+                                            <input type="radio" name="bg-color" value="">
+                                        </label>
+                                        <label class="check-bg-color-item" style="background-color: #afb6bb;">
+                                            <input type="radio" name="bg-color" value="">
+                                        </label>
+                                        <label class="check-bg-color-item" style="background-color: #586269;">
+                                            <input type="radio" name="bg-color" value="">
+                                        </label>
+                                        <label class="check-bg-color-item" style="background-color: #3d4348;">
+                                            <input type="radio" name="bg-color" value="">
+                                        </label>
+                                        <label class="check-bg-color-item" style="background-color: #0e0f11;">
+                                            <input type="radio" name="bg-color" value="">
+                                        </label>
+                                        <label class="check-bg-color-item" style="background-color: #000000;">
+                                            <input type="radio" name="bg-color" value="">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="option-panel-item">
+                                    <div class="hgroup">
+                                        <h4>배경지도</h4>
+                                        <div class="opacity-control">
+                                            <strong>투명도</strong>
+                                            <input type="range" min="0" max="100" value="50" step="1" title="투명도">
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-map-list">
+                                        <label class="check-bg-map">
+                                            <input type="radio" name="bg-map" value="">
+                                            <div class="check-bg-map-img"><img src="./assets/images/map/map-bg-1.png" alt=""></div>
+                                            <div class="check-bg-map-title">해안선</div>
+                                        </label>
+                                        <label class="check-bg-map">
+                                            <input type="radio" name="bg-map" value="">
+                                            <div class="check-bg-map-img"><img src="./assets/images/map/map-bg-2.png" alt=""></div>
+                                            <div class="check-bg-map-title">약최고고조면</div>
+                                        </label>
+                                        <label class="check-bg-map">
+                                            <input type="radio" name="bg-map" value="">
+                                            <div class="check-bg-map-img"><img src="./assets/images/map/map-bg-3.png" alt=""></div>
+                                            <div class="check-bg-map-title">기본수준면</div>
+                                        </label>
+                                        <label class="check-bg-map">
+                                            <input type="radio" name="bg-map" value="">
+                                            <div class="check-bg-map-img"><img src="./assets/images/map/map-bg-4.png" alt=""></div>
+                                            <div class="check-bg-map-title">영문주기</div>
+                                        </label>
+                                        <label class="check-bg-map">
+                                            <input type="radio" name="bg-map" value="">
+                                            <div class="check-bg-map-img"><img src="./assets/images/map/map-bg-5.png" alt=""></div>
+                                            <div class="check-bg-map-title">전자해도</div>
+                                        </label>
+                                        <label class="check-bg-map">
+                                            <input type="radio" name="bg-map" value="">
+                                            <div class="check-bg-map-img"><img src="./assets/images/map/map-bg-6.png" alt=""></div>
+                                            <div class="check-bg-map-title">영상맵</div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="control-btn-row">
+                    <button class="btn-control-popup" type="button" data-option-target="optionPanel2" aria-pressed="false">
+                        <i class="svg-icon ico-layer"></i>
+                        <div class="btn-tooltip">표출레이어</div>
+                    </button>
+                    <div class="option-panel" id="optionPanel2">
+                        <div class="option-panel-inner">
+                            <button class="option-close" type="button"><i class="svg-icon ico-close"></i></button>
+                            <div class="option-panel-title">표출레이어</div>
+                            <div class="option-panel-content">
+                                <ul class="layer-list">
+                                    <li class="layer-list-item">
+                                        <span class="layer-icon ico-layer-1"></span>
+                                        <span class="layer-label">암초</span>
+                                        <button class="layer-remove" type="button"></button>
+                                    </li>
+                                    <li class="layer-list-item">
+                                        <span class="layer-icon ico-layer-2"></span>
+                                        <span class="layer-label">영해기점무인도서</span>
+                                        <button class="layer-remove" type="button"></button>
+                                    </li>
+                                    <li class="layer-list-item">
+                                        <span class="layer-icon ico-layer-3"></span>
+                                        <span class="layer-label">예측 조위</span>
+                                        <button class="layer-remove" type="button"></button>
+                                    </li>
+                                    <li class="layer-list-item">
+                                        <span class="layer-icon ico-layer-4"></span>
+                                        <span class="layer-label">선박사고</span>
+                                        <button class="layer-remove" type="button"></button>
+                                    </li>
+                                    <li class="layer-list-item">
+                                        <span class="layer-icon ico-layer-5"></span>
+                                        <span class="layer-label">조류</span>
+                                        <button class="layer-remove" type="button"></button>
+                                    </li>
+                                    <li class="layer-list-item">
+                                        <span class="layer-icon ico-layer-6"></span>
+                                        <span class="layer-label">와류</span>
+                                        <button class="layer-remove" type="button"></button>
+                                    </li>
+                                    <li class="layer-list-item">
+                                        <span class="layer-icon ico-layer-7"></span>
+                                        <span class="layer-label">해양지명</span>
+                                        <button class="layer-remove" type="button"></button>
+                                    </li>
+                                    <li class="layer-list-item">
+                                        <span class="layer-icon ico-layer-8"></span>
+                                        <span class="layer-label">해수면</span>
+                                        <button class="layer-remove" type="button"></button>
+                                    </li>
+                                    <li class="layer-list-item">
+                                        <span class="layer-icon ico-layer-9"></span>
+                                        <span class="layer-label">배경지도 - 기본맵</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="control-btn-row group">
+                    <button class="btn-control-btn" type="button" aria-pressed="false">
+                        <i class="svg-icon ico-distance"></i>
+                        <div class="btn-tooltip">거리재기</div>
+                    </button>
+                    <button class="btn-control-btn" type="button" aria-pressed="false">
+                        <i class="svg-icon ico-area"></i>
+                        <div class="btn-tooltip">거리재기</div>
+                    </button>
+                    <button class="btn-control-btn no-active" type="button" aria-pressed="false"><i class="svg-icon ico-refresh"></i>
+                        <div class="btn-tooltip">새로고침</div>
+                    </button>
+                </div>
+
+                <div class="control-btn-row">
+                    <button class="btn-control-popup" type="button" data-option-target="optionPanel3" aria-pressed="false">
+                        <i class="svg-icon ico-legend"></i>
+                        <div class="btn-tooltip">범례</div>
+                    </button>
+                    <div class="option-panel" id="optionPanel3" style="top:26.5rem">
+                        <div class="option-panel-inner">
+                            <button class="option-close" type="button"><i class="svg-icon ico-close"></i></button>
+                            <div class="option-panel-title">범례</div>
+                            <div class="option-panel-content">
+                                범례
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="control-btn-row group">
+                    <button class="btn-control-btn" type="button">
+                        <i class="svg-icon ico-guide"></i>
+                        <div class="btn-tooltip">가이드</div>
+                    </button>
+                    <button class="btn-control-btn no-active" type="button" aria-pressed="false">
+                        <i class="svg-icon ico-export"></i>
+                        <div class="btn-tooltip">내보내기</div>
+                    </button>
                 </div>
             </div>
         </div>
         <!-- //지도 컨트롤 -->
     </div>
     <!-- //map-container -->
+    <div id="info-tool" class="info-tool">
+        <div class="info-tool-content">
+            <button class="info-tool-close" type="button"><i class="svg-icon ico-close"></i></button>
+            <div class="info-tool-text"></div>
+        </div>
+    </div>
+    <div id="map-context-menu" class="map-context-menu">
+      <div class="map-context-menu-group">
+        <div class="rows set">
+            <button class="zoom-btn" id="zoom-in" title="확대"><i class="svg-icon ico-zoom-in"></i><span></span></button>
+            <button class="zoom-btn" id="zoom-out" title="축소"><i class="svg-icon ico-zoom-out"></i><span></span></button>
+        </div>
+        <div class="rows">
+            <button class="btn-control-popup" type="button" data-option-target="optionPanel1" aria-pressed="false"><i class="svg-icon ico-map-bg"></i><span>배경지도</span></button>
+            <button class="btn-control-btn" type="button" aria-pressed="false"><i class="svg-icon ico-refresh"></i><span>새로고침</span></button>
+        </div>
+        <div class="rows">
+            <button class="btn-control-btn" type="button" aria-pressed="false"><i class="svg-icon ico-distance"></i><span>거리재기</span></button>
+            <button class="btn-control-btn" type="button" aria-pressed="false"><i class="svg-icon ico-area"></i><span>면적재기</span></button>
+        </div>
+        <div class="rows">
+            <button class="btn-control-btn" type="button" aria-pressed="false"><i class="svg-icon ico-guide"></i><span>가이드</span></button>
+            <button class="btn-control-btn" type="button" aria-pressed="false"><i class="svg-icon ico-export"></i><span>내보내기</span></button>
+        </div>
+      </div>
+    </div>
+
     
+    <div class="map-pin" style="position:absolute; left:400px; top:200px; width:24px; height:24px; background:red; border-radius:50%; cursor:pointer;"></div>
+    
+    <div id="map-pin-popup" class="map-pin-popup">
+      <div class="map-pin-popup-content">
+        <button class="map-pin-popup-close" type="button"><i class="svg-icon ico-close"></i></button>
+        <div class="map-pin-popup-inner"></div>
+      </div>
+    </div>
+
+    
+    <script>
+    // AI 분석 모델 메뉴 토글
+    const aiBtn = document.getElementById('ai-model-btn');
+    const aiPanel = document.getElementById('ai-model-panel');
+    aiBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        aiPanel.classList.toggle('show');
+    });
+    // 메뉴 바깥 클릭 시 닫힘
+    document.addEventListener('click', function(e) {
+        if(aiPanel.classList.contains('show')){
+            if(!aiPanel.contains(e.target) && e.target !== aiBtn){
+                aiPanel.classList.remove('show');
+            }
+        }
+    });
+    // 리스트 항목 클릭 시 활성화
+    document.querySelectorAll('.ai-model-list li').forEach(function(item){
+        item.addEventListener('click', function(){
+            document.querySelectorAll('.ai-model-list li').forEach(li=>li.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    const range = document.getElementById('zoom-range');
+      const zoomIn = document.getElementById('zoom-in');
+      const zoomOut = document.getElementById('zoom-out');
+      
+      function updateSliderGradient() {
+        const min = parseInt(range.min);
+        const max = parseInt(range.max);
+        const val = parseInt(range.value);
+        const percent = ((val - min) / (max - min)) * 100;
+        //range.style.background = `linear-gradient(to top, #007bff ${percent}%, #ddd ${percent}%)`;
+        range.style.background = `linear-gradient(to bottom, #007bff ${percent}%, #ddd ${percent}%)`;
+      }
+      
+      zoomIn.addEventListener('click', () => {
+        const val = parseInt(range.value);
+        if (val < parseInt(range.max)) {
+          range.value = val + 1;
+          updateSliderGradient();
+        }
+      });
+      
+      zoomOut.addEventListener('click', () => {
+        const val = parseInt(range.value);
+        if (val > parseInt(range.min)) {
+          range.value = val - 1;
+          updateSliderGradient();
+        }
+      });
+      
+      range.addEventListener('input', updateSliderGradient);
+      
+      // 초기화
+      updateSliderGradient();
+
+
+    //공통 팝업 레이어 스크립트
+    const popupLayer = document.getElementById('popupLayer');
+    const popupOverlay = document.getElementById('popupOverlay');
+    const popupClose = document.getElementById('popupClose');
+    document.querySelectorAll('.btn-control-popup').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            popupLayer.classList.add('show');
+            popupOverlay.classList.add('show');
+        });
+    });
+    function closePopup() {
+        popupLayer.classList.remove('show');
+        popupOverlay.classList.remove('show');
+    }
+    popupClose.addEventListener('click', closePopup);
+    popupOverlay.addEventListener('click', closePopup);
+
+    // 다중 옵션 패널 토글 (이벤트 위임)
+    document.addEventListener('click', function(e) {
+      const btn = e.target.closest('.btn-control-popup, .btn-control-btn');
+      if (!btn) return;
+
+      // 옵션 패널 버튼
+      if (btn.classList.contains('btn-control-popup') && btn.hasAttribute('data-option-target')) {
+        e.stopPropagation();
+        const targetId = btn.getAttribute('data-option-target');
+        const panel = document.getElementById(targetId);
+        if (!panel) return;
+
+        const isOpen = panel.classList.contains('show');
+
+        // 모든 옵션 패널 닫기 + 모든 btn-control-popup aria-pressed false
+        document.querySelectorAll('.option-panel').forEach(p => p.classList.remove('show'));
+        document.querySelectorAll('.btn-control-popup').forEach(b => b.setAttribute('aria-pressed', 'false'));
+
+        // 토글: 이미 열려 있으면 닫고, 아니면 연다
+        if (!isOpen) {
+          panel.classList.add('show');
+          btn.setAttribute('aria-pressed', 'true');
+        }
+        // 이미 열려 있으면 아무것도 안 함(닫힌 상태 유지)
+        return;
+      }
+
+      // 일반 토글 버튼
+      if (btn.classList.contains('btn-control-btn')) {
+        // no-active 클래스가 있으면 토글하지 않음
+        if (btn.classList.contains('no-active')) return;
+        const isPressed = btn.getAttribute('aria-pressed') === 'true';
+        btn.setAttribute('aria-pressed', isPressed ? 'false' : 'true');
+        return;
+      }
+    });
+    // 옵션 패널 내부 닫기 버튼
+    document.querySelectorAll('.option-close').forEach(closeBtn => {
+        closeBtn.addEventListener('click', function(e) {
+            const panel = closeBtn.closest('.option-panel');
+            panel.classList.remove('show');
+            const btn = document.querySelector(`[data-option-target="${panel.id}"]`);
+            if(btn) {
+                btn.setAttribute('aria-pressed', 'false');
+            }
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const toggleButtons = document.querySelectorAll('.toggle-list > li > button');
+    
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function() {
+        const listItem = this.parentElement;
+        const isExpanded = listItem.getAttribute('aria-expanded') === 'true';
+        
+        // 현재 클릭된 아이템의 상태 토글
+        listItem.setAttribute('aria-expanded', !isExpanded);
+        
+        // 다른 아이템들은 닫기
+        toggleButtons.forEach(otherButton => {
+            if (otherButton !== this) {
+            otherButton.parentElement.setAttribute('aria-expanded', 'false');
+            }
+        });
+        });
+    });
+    }); 
+
+    // 툴팁 기능
+    const infoTool = document.getElementById('info-tool');
+    const infoToolText = infoTool.querySelector('.info-tool-text');
+    const infoToolClose = infoTool.querySelector('.info-tool-close');
+    let activeTooltip = null;
+
+    // 툴팁 위치 조정 함수
+    function positionTooltip(button) {
+      const rect = button.getBoundingClientRect();
+      const tooltipRect = infoTool.getBoundingClientRect();
+      
+      let left = rect.left;
+      let top = rect.bottom + 10;
+
+      // 화면 오른쪽 경계 체크
+      if (left + tooltipRect.width > window.innerWidth) {
+        left = window.innerWidth - tooltipRect.width - 20;
+      }
+
+      // 화면 아래쪽 경계 체크
+      if (top + tooltipRect.height > window.innerHeight) {
+        top = rect.top - tooltipRect.height - 10;
+      }
+
+      infoTool.style.left = `${left}px`;
+      infoTool.style.top = `${top}px`;
+    }
+
+    // 툴팁 토글 함수
+    function toggleTooltip(button) {
+      const content = button.getAttribute('data-text') || '설명이 없습니다.';
+
+      if (activeTooltip === button) {
+        infoTool.classList.remove('show');
+        button.setAttribute('aria-pressed', 'false');
+        activeTooltip = null;
+      } else {
+        if (activeTooltip) {
+          activeTooltip.setAttribute('aria-pressed', 'false');
+        }
+        infoToolText.textContent = content;
+        infoTool.classList.add('show');
+        positionTooltip(button);
+        button.setAttribute('aria-pressed', 'true');
+        activeTooltip = button;
+      }
+    }
+
+    // 툴팁 버튼 이벤트 리스너
+    document.querySelectorAll('.toggle-tooltip').forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleTooltip(button);
+      });
+    });
+
+    // 툴팁 닫기
+    infoToolClose.addEventListener('click', () => {
+      infoTool.classList.remove('show');
+      if (activeTooltip) {
+        activeTooltip.setAttribute('aria-pressed', 'false');
+        activeTooltip = null;
+      }
+    });
+
+    // 툴팁 외부 클릭 시 닫기
+    document.addEventListener('click', (e) => {
+      if (!infoTool.contains(e.target) && !e.target.closest('.toggle-tooltip')) {
+        infoTool.classList.remove('show');
+        if (activeTooltip) {
+          activeTooltip.setAttribute('aria-pressed', 'false');
+          activeTooltip = null;
+        }
+      }
+    });
+
+    // 지도 우클릭 컨텍스트 메뉴
+    const mapArea = document.getElementById('map');
+    const contextMenu = document.getElementById('map-context-menu');
+    mapArea.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+      contextMenu.style.display = 'block';
+      // 위치 조정 (화면 벗어나지 않게)
+      let left = e.clientX;
+      let top = e.clientY;
+      const menuRect = contextMenu.getBoundingClientRect();
+      if (left + menuRect.width > window.innerWidth) left = window.innerWidth - menuRect.width - 10;
+      if (top + menuRect.height > window.innerHeight) top = window.innerHeight - menuRect.height - 10;
+      contextMenu.style.left = left + 'px';
+      contextMenu.style.top = top + 'px';
+    });
+    document.addEventListener('click', function(e) {
+      if (!contextMenu.contains(e.target)) {
+        contextMenu.style.display = 'none';
+      }
+    });
+    window.addEventListener('scroll', () => contextMenu.style.display = 'none');
+    window.addEventListener('resize', () => contextMenu.style.display = 'none');
+
+    // 검색 토글 버튼 기능
+    const searchToggleBtn = document.querySelector('.map-search-header');
+    const mapSearch = document.querySelector('.map-search');
+
+    if (searchToggleBtn && mapSearch) {
+      searchToggleBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const isOpen = mapSearch.classList.toggle('open');
+        searchToggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      // 바깥 클릭 시 닫기
+    //   document.addEventListener('click', function(e) {
+    //     if (mapSearch.classList.contains('open') && !mapSearch.contains(e.target) && e.target !== searchToggleBtn) {
+    //       mapSearch.classList.remove('open');
+    //       searchToggleBtn.setAttribute('aria-pressed', 'false');
+    //     }
+    //   });
+    }
+
+    // analysis-layer-list 드래그&드롭 정렬
+    (function() {
+      const list = document.querySelector('.analysis-layer-list');
+      if (!list) return;
+      let draggingEl = null;
+      let placeholder = null;
+      let offsetY = 0;
+
+      list.querySelectorAll('.layer-drag').forEach(handle => {
+        handle.style.cursor = 'grab';
+        handle.addEventListener('mousedown', function(e) {
+          e.preventDefault();
+          draggingEl = handle.closest('li');
+          placeholder = document.createElement('li');
+          placeholder.className = 'drag-placeholder';
+          placeholder.style.height = draggingEl.offsetHeight + 'px';
+          draggingEl.parentNode.insertBefore(placeholder, draggingEl.nextSibling);
+          draggingEl.classList.add('dragging');
+          offsetY = e.clientY - draggingEl.getBoundingClientRect().top;
+          draggingEl.style.width = draggingEl.offsetWidth + 'px';
+          draggingEl.style.position = 'absolute';
+          draggingEl.style.zIndex = 1000;
+          draggingEl.style.pointerEvents = 'none';
+          document.body.appendChild(draggingEl);
+          moveAt(e.pageX, e.pageY);
+          document.body.style.userSelect = 'none';
+        });
+      });
+
+      function moveAt(pageX, pageY) {
+        if (!draggingEl) return;
+        draggingEl.style.left = list.getBoundingClientRect().left + 'px';
+        draggingEl.style.top = (pageY - offsetY) + 'px';
+      }
+
+      document.addEventListener('mousemove', function(e) {
+        if (!draggingEl) return;
+        moveAt(e.pageX, e.pageY);
+        // 위치 계산
+        const rects = Array.from(list.children).filter(li => li !== draggingEl && li !== placeholder);
+        for (const li of rects) {
+          const rect = li.getBoundingClientRect();
+          if (e.clientY < rect.top + rect.height / 2) {
+            list.insertBefore(placeholder, li);
+            break;
+          } else {
+            list.appendChild(placeholder);
+          }
+        }
+      });
+
+      document.addEventListener('mouseup', function(e) {
+        if (!draggingEl) return;
+        draggingEl.classList.remove('dragging');
+        draggingEl.style.position = '';
+        draggingEl.style.zIndex = '';
+        draggingEl.style.pointerEvents = '';
+        draggingEl.style.width = '';
+        draggingEl.style.left = '';
+        draggingEl.style.top = '';
+        list.insertBefore(draggingEl, placeholder);
+        placeholder.remove();
+        placeholder = null;
+        draggingEl = null;
+        document.body.style.userSelect = '';
+      });
+    })();
+
+    
+
+    // 지도 핀 팝업 스타일 (SCSS는 이미 안내, 여기선 style 태그로 샘플)
+    const style = document.createElement('style');
+    style.innerHTML = `
+    .map-pin-popup { display: none; position: fixed; z-index: 3000; background: #fff; border-radius: 1.2rem; border: 1px solid #d8d8d8; box-shadow: 0 8px 32px rgba(0,0,0,0.18); min-width: 24rem; max-width: 32rem; }
+    .map-pin-popup.show { display: block; }
+    .map-pin-popup-content { position: relative; padding: 2rem; }
+    .map-pin-popup-close { position: absolute; top: 1.2rem; right: 1.2rem; background: none; border: none; font-size: 2.2rem; color: #888; cursor: pointer; line-height: 1; padding: 0; transition: color 0.15s; }
+    .map-pin-popup-close:hover { color: #222; }
+    .map-pin-popup-inner { font-size: 1.5rem; color: #222; line-height: 1.5; }
+    `;
+    document.head.appendChild(style);
+
+    // 지도 핀 팝업 JS
+    function showMapPinPopup(x, y, html) {
+      const popup = document.getElementById('map-pin-popup');
+      const inner = popup.querySelector('.map-pin-popup-inner');
+      inner.innerHTML = html;
+      popup.classList.add('show');
+      // 위치 조정 (x, y는 client 좌표)
+      const popupRect = popup.getBoundingClientRect();
+      let left = x;
+      let top = y;
+      if (left + popupRect.width > window.innerWidth) left = window.innerWidth - popupRect.width - 10;
+      if (top + popupRect.height > window.innerHeight) top = window.innerHeight - popupRect.height - 10;
+      popup.style.left = left + 'px';
+      popup.style.top = top + 'px';
+    }
+    document.querySelector('.map-pin-popup-close').addEventListener('click', function() {
+      document.getElementById('map-pin-popup').classList.remove('show');
+    });
+    document.addEventListener('click', function(e) {
+      const popup = document.getElementById('map-pin-popup');
+      if (popup.classList.contains('show') && !popup.contains(e.target) && !e.target.classList.contains('map-pin')) {
+        popup.classList.remove('show');
+      }
+    });
+    document.querySelectorAll('.map-pin').forEach(pin => {
+      pin.addEventListener('click', function(e) {
+        e.stopPropagation();
+        showMapPinPopup(e.clientX, e.clientY, `<strong>여기는 핀 팝업!</strong><br>원하는 HTML을 넣으세요.`);
+      });
+    });
+
+    </script>
 </body>
 </html>

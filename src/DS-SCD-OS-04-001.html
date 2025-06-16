@@ -102,9 +102,9 @@
 
             <!-- 좌상단: 전체레이어 버튼 -->
             <div class="map-search">
-                <div class="map-search-header">
+                <div class="map-search-header" role="button">
                     <strong><i></i>전체레이어</strong>
-                    <button class="btn-search-toggle"><i></i></button>
+                    <button class="btn-search-toggle" aria-pressed="false"><i></i></button>
                 </div>
                 <div class="map-search-input">
                     <div class="wraps">
@@ -131,7 +131,7 @@
                                         <div class="layer-actions">
                                             <div class="layer-actions-left">
                                                 <button class="toggle-favorites" aria-pressed="false"><i class="ico-favorite"></i></button>
-                                                <button class="toggle-tooltip"><i class="svg-icon ico-info"></i></button>
+                                                <button class="toggle-tooltip" data-text="해저면에서 돌출된 암석으로, 선박의 안전한 항행을 위해 주의가 필요한 지형입니다."><i class="svg-icon ico-info"></i></button>
                                             </div>
                                             <div class="switch-item">
                                                 <label class="switch">
@@ -146,7 +146,7 @@
                                         <div class="layer-actions">
                                             <div class="layer-actions-left">
                                                 <button class="toggle-favorites" aria-pressed="true"><i class="ico-favorite"></i></button>
-                                                <button class="toggle-tooltip"><i class="svg-icon ico-info"></i></button>
+                                                <button class="toggle-tooltip" data-text="영해의 측정을 위한 기준점이 되는 무인도서입니다."><i class="svg-icon ico-info"></i></button>
                                             </div>
                                             <div class="switch-item">
                                                 <label class="switch">
@@ -167,7 +167,7 @@
                                         <div class="layer-label2">암초</div>
                                         <div class="layer-actions">
                                             <div class="layer-actions-left">
-                                                <button class="toggle-tooltip"><i class="svg-icon ico-info"></i></button>
+                                                <button class="toggle-tooltip" data-text="해저면에서 돌출된 암석으로, 선박의 안전한 항행을 위해 주의가 필요한 지형입니다."><i class="svg-icon ico-info"></i></button>
                                             </div>
                                             <div class="switch-item">
                                                 <label class="switch">
@@ -185,14 +185,174 @@
                         <h3>분석 결과 레이어</h3>
                     </div>
                     <div class="map-search-result-list">
-                        <ul>
+                        <ul class="analysis-layer-list">
                             <li>
                                 <div class="layer-item">
                                     <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
                                     <div class="layer-label2">최적 경로 레이어</div>
                                     <div class="layer-actions">
                                         <div class="layer-actions-left">
-                                            <button class="toggle-tooltip"><i class="svg-icon ico-info"></i></button>
+                                            <button class="toggle-tooltip" data-text="선박의 안전한 항행을 위한 최적의 경로를 표시합니다."><i class="svg-icon ico-info"></i></button>
+                                        </div>
+                                        <div class="switch-item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="layer-item">
+                                    <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
+                                    <div class="layer-label2">최적 경로 레이어</div>
+                                    <div class="layer-actions">
+                                        <div class="layer-actions-left">
+                                            <button class="toggle-tooltip" data-text="선박의 안전한 항행을 위한 최적의 경로를 표시합니다."><i class="svg-icon ico-info"></i></button>
+                                        </div>
+                                        <div class="switch-item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="layer-item">
+                                    <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
+                                    <div class="layer-label2">최적 경로 레이어</div>
+                                    <div class="layer-actions">
+                                        <div class="layer-actions-left">
+                                            <button class="toggle-tooltip" data-text="선박의 안전한 항행을 위한 최적의 경로를 표시합니다."><i class="svg-icon ico-info"></i></button>
+                                        </div>
+                                        <div class="switch-item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="layer-item">
+                                    <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
+                                    <div class="layer-label2">최적 경로 레이어</div>
+                                    <div class="layer-actions">
+                                        <div class="layer-actions-left">
+                                            <button class="toggle-tooltip" data-text="선박의 안전한 항행을 위한 최적의 경로를 표시합니다."><i class="svg-icon ico-info"></i></button>
+                                        </div>
+                                        <div class="switch-item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="layer-item">
+                                    <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
+                                    <div class="layer-label2">최적 경로 레이어</div>
+                                    <div class="layer-actions">
+                                        <div class="layer-actions-left">
+                                            <button class="toggle-tooltip" data-text="선박의 안전한 항행을 위한 최적의 경로를 표시합니다."><i class="svg-icon ico-info"></i></button>
+                                        </div>
+                                        <div class="switch-item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="layer-item">
+                                    <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
+                                    <div class="layer-label2">최적 경로 레이어</div>
+                                    <div class="layer-actions">
+                                        <div class="layer-actions-left">
+                                            <button class="toggle-tooltip" data-text="선박의 안전한 항행을 위한 최적의 경로를 표시합니다."><i class="svg-icon ico-info"></i></button>
+                                        </div>
+                                        <div class="switch-item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="layer-item">
+                                    <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
+                                    <div class="layer-label2">최적 경로 레이어</div>
+                                    <div class="layer-actions">
+                                        <div class="layer-actions-left">
+                                            <button class="toggle-tooltip" data-text="선박의 안전한 항행을 위한 최적의 경로를 표시합니다."><i class="svg-icon ico-info"></i></button>
+                                        </div>
+                                        <div class="switch-item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="layer-item">
+                                    <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
+                                    <div class="layer-label2">최적 경로 레이어</div>
+                                    <div class="layer-actions">
+                                        <div class="layer-actions-left">
+                                            <button class="toggle-tooltip" data-text="선박의 안전한 항행을 위한 최적의 경로를 표시합니다."><i class="svg-icon ico-info"></i></button>
+                                        </div>
+                                        <div class="switch-item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="layer-item">
+                                    <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
+                                    <div class="layer-label2">최적 경로 레이어</div>
+                                    <div class="layer-actions">
+                                        <div class="layer-actions-left">
+                                            <button class="toggle-tooltip" data-text="선박의 안전한 항행을 위한 최적의 경로를 표시합니다."><i class="svg-icon ico-info"></i></button>
+                                        </div>
+                                        <div class="switch-item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="layer-item">
+                                    <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
+                                    <div class="layer-label2">최적 경로 레이어</div>
+                                    <div class="layer-actions">
+                                        <div class="layer-actions-left">
+                                            <button class="toggle-tooltip" data-text="선박의 안전한 항행을 위한 최적의 경로를 표시합니다."><i class="svg-icon ico-info"></i></button>
+                                        </div>
+                                        <div class="switch-item">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="layer-item">
+                                    <div class="layer-drag"><span class="ico-drag svg-icon"></span></div>
+                                    <div class="layer-label2">최적 경로 레이어</div>
+                                    <div class="layer-actions">
+                                        <div class="layer-actions-left">
+                                            <button class="toggle-tooltip" data-text="선박의 안전한 항행을 위한 최적의 경로를 표시합니다."><i class="svg-icon ico-info"></i></button>
                                         </div>
                                         <div class="switch-item">
                                             <label class="switch">
@@ -399,8 +559,7 @@
                         <i class="svg-icon ico-area"></i>
                         <div class="btn-tooltip">거리재기</div>
                     </button>
-                    <button class="btn-control-btn" type="button" aria-pressed="false">
-                        <i class="svg-icon ico-refresh"></i>
+                    <button class="btn-control-btn no-active" type="button" aria-pressed="false"><i class="svg-icon ico-refresh"></i>
                         <div class="btn-tooltip">새로고침</div>
                     </button>
                 </div>
@@ -410,7 +569,7 @@
                         <i class="svg-icon ico-legend"></i>
                         <div class="btn-tooltip">범례</div>
                     </button>
-                    <div class="option-panel" id="optionPanel2">
+                    <div class="option-panel" id="optionPanel3" style="top:26.5rem">
                         <div class="option-panel-inner">
                             <button class="option-close" type="button"><i class="svg-icon ico-close"></i></button>
                             <div class="option-panel-title">범례</div>
@@ -426,7 +585,7 @@
                         <i class="svg-icon ico-guide"></i>
                         <div class="btn-tooltip">가이드</div>
                     </button>
-                    <button class="btn-control-btn" type="button">
+                    <button class="btn-control-btn no-active" type="button" aria-pressed="false">
                         <i class="svg-icon ico-export"></i>
                         <div class="btn-tooltip">내보내기</div>
                     </button>
@@ -436,6 +595,44 @@
         <!-- //지도 컨트롤 -->
     </div>
     <!-- //map-container -->
+    <div id="info-tool" class="info-tool">
+        <div class="info-tool-content">
+            <button class="info-tool-close" type="button"><i class="svg-icon ico-close"></i></button>
+            <div class="info-tool-text"></div>
+        </div>
+    </div>
+    <div id="map-context-menu" class="map-context-menu">
+      <div class="map-context-menu-group">
+        <div class="rows set">
+            <button class="zoom-btn" id="zoom-in" title="확대"><i class="svg-icon ico-zoom-in"></i><span></span></button>
+            <button class="zoom-btn" id="zoom-out" title="축소"><i class="svg-icon ico-zoom-out"></i><span></span></button>
+        </div>
+        <div class="rows">
+            <button class="btn-control-popup" type="button" data-option-target="optionPanel1" aria-pressed="false"><i class="svg-icon ico-map-bg"></i><span>배경지도</span></button>
+            <button class="btn-control-btn" type="button" aria-pressed="false"><i class="svg-icon ico-refresh"></i><span>새로고침</span></button>
+        </div>
+        <div class="rows">
+            <button class="btn-control-btn" type="button" aria-pressed="false"><i class="svg-icon ico-distance"></i><span>거리재기</span></button>
+            <button class="btn-control-btn" type="button" aria-pressed="false"><i class="svg-icon ico-area"></i><span>면적재기</span></button>
+        </div>
+        <div class="rows">
+            <button class="btn-control-btn" type="button" aria-pressed="false"><i class="svg-icon ico-guide"></i><span>가이드</span></button>
+            <button class="btn-control-btn" type="button" aria-pressed="false"><i class="svg-icon ico-export"></i><span>내보내기</span></button>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="map-pin" style="position:absolute; left:400px; top:200px; width:24px; height:24px; background:red; border-radius:50%; cursor:pointer;"></div>
+    
+    <div id="map-pin-popup" class="map-pin-popup">
+      <div class="map-pin-popup-content">
+        <button class="map-pin-popup-close" type="button"><i class="svg-icon ico-close"></i></button>
+        <div class="map-pin-popup-inner"></div>
+      </div>
+    </div>
+
+    
     <script type="module" src="/js/main.js"></script>
     <script>
     // AI 분석 모델 메뉴 토글
@@ -514,50 +711,42 @@
     popupOverlay.addEventListener('click', closePopup);
 
     // 다중 옵션 패널 토글 (이벤트 위임)
-    function closeAllOptionPanels() {
-        document.querySelectorAll('.option-panel').forEach(panel => {
-            panel.classList.remove('show');
-        });
-    }
-
-    // 버튼 토글 처리
-    function toggleButton(btn) {
-        const isPressed = btn.getAttribute('aria-pressed') === 'true';
-        btn.setAttribute('aria-pressed', !isPressed);
-    }
-
     document.addEventListener('click', function(e) {
-        const btn = e.target.closest('.btn-control-popup, .btn-control-btn');
-        if(btn) {
-            e.stopPropagation();
-            
-            // 옵션 패널이 있는 버튼인 경우
-            if(btn.hasAttribute('data-option-target')) {
-                const targetId = btn.getAttribute('data-option-target');
-                const panel = document.getElementById(targetId);
-                if(!panel) return;
-                
-                const isOpen = panel.classList.contains('show');
-                closeAllOptionPanels();
-                
-                if(!isOpen) {
-                    panel.classList.add('show');
-                    btn.setAttribute('aria-pressed', 'true');
-                } else {
-                    btn.setAttribute('aria-pressed', 'false');
-                }
-            } else {
-                // 일반 토글 버튼인 경우
-                toggleButton(btn);
-            }
-            return;
-        }
-        // 옵션창 바깥 클릭 시 닫기
-        if(!e.target.closest('.option-panel')){
-            closeAllOptionPanels();
-        }
-    });
+      const btn = e.target.closest('.btn-control-popup, .btn-control-btn');
+      if (!btn) return;
 
+      // 옵션 패널 버튼
+      if (btn.classList.contains('btn-control-popup') && btn.hasAttribute('data-option-target')) {
+        e.stopPropagation();
+        const targetId = btn.getAttribute('data-option-target');
+        const panel = document.getElementById(targetId);
+        if (!panel) return;
+
+        const isOpen = panel.classList.contains('show');
+
+        // 모든 옵션 패널 닫기 + 모든 btn-control-popup aria-pressed false
+        document.querySelectorAll('.option-panel').forEach(p => p.classList.remove('show'));
+        document.querySelectorAll('.btn-control-popup').forEach(b => b.setAttribute('aria-pressed', 'false'));
+
+        // 토글: 이미 열려 있으면 닫고, 아니면 연다
+        if (!isOpen) {
+          panel.classList.add('show');
+          btn.setAttribute('aria-pressed', 'true');
+        }
+        // 이미 열려 있으면 아무것도 안 함(닫힌 상태 유지)
+        return;
+      }
+
+      // 일반 토글 버튼
+      if (btn.classList.contains('btn-control-btn')) {
+        // no-active 클래스가 있으면 토글하지 않음
+        if (btn.classList.contains('no-active')) return;
+        const isPressed = btn.getAttribute('aria-pressed') === 'true';
+        btn.setAttribute('aria-pressed', isPressed ? 'false' : 'true');
+        return;
+      }
+    });
+    // 옵션 패널 내부 닫기 버튼
     document.querySelectorAll('.option-close').forEach(closeBtn => {
         closeBtn.addEventListener('click', function(e) {
             const panel = closeBtn.closest('.option-panel');
@@ -589,6 +778,238 @@
         });
     });
     }); 
+
+    // 툴팁 기능
+    const infoTool = document.getElementById('info-tool');
+    const infoToolText = infoTool.querySelector('.info-tool-text');
+    const infoToolClose = infoTool.querySelector('.info-tool-close');
+    let activeTooltip = null;
+
+    // 툴팁 위치 조정 함수
+    function positionTooltip(button) {
+      const rect = button.getBoundingClientRect();
+      const tooltipRect = infoTool.getBoundingClientRect();
+      
+      let left = rect.left;
+      let top = rect.bottom + 10;
+
+      // 화면 오른쪽 경계 체크
+      if (left + tooltipRect.width > window.innerWidth) {
+        left = window.innerWidth - tooltipRect.width - 20;
+      }
+
+      // 화면 아래쪽 경계 체크
+      if (top + tooltipRect.height > window.innerHeight) {
+        top = rect.top - tooltipRect.height - 10;
+      }
+
+      infoTool.style.left = `${left}px`;
+      infoTool.style.top = `${top}px`;
+    }
+
+    // 툴팁 토글 함수
+    function toggleTooltip(button) {
+      const content = button.getAttribute('data-text') || '설명이 없습니다.';
+
+      if (activeTooltip === button) {
+        infoTool.classList.remove('show');
+        button.setAttribute('aria-pressed', 'false');
+        activeTooltip = null;
+      } else {
+        if (activeTooltip) {
+          activeTooltip.setAttribute('aria-pressed', 'false');
+        }
+        infoToolText.textContent = content;
+        infoTool.classList.add('show');
+        positionTooltip(button);
+        button.setAttribute('aria-pressed', 'true');
+        activeTooltip = button;
+      }
+    }
+
+    // 툴팁 버튼 이벤트 리스너
+    document.querySelectorAll('.toggle-tooltip').forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleTooltip(button);
+      });
+    });
+
+    // 툴팁 닫기
+    infoToolClose.addEventListener('click', () => {
+      infoTool.classList.remove('show');
+      if (activeTooltip) {
+        activeTooltip.setAttribute('aria-pressed', 'false');
+        activeTooltip = null;
+      }
+    });
+
+    // 툴팁 외부 클릭 시 닫기
+    document.addEventListener('click', (e) => {
+      if (!infoTool.contains(e.target) && !e.target.closest('.toggle-tooltip')) {
+        infoTool.classList.remove('show');
+        if (activeTooltip) {
+          activeTooltip.setAttribute('aria-pressed', 'false');
+          activeTooltip = null;
+        }
+      }
+    });
+
+    // 지도 우클릭 컨텍스트 메뉴
+    const mapArea = document.getElementById('map');
+    const contextMenu = document.getElementById('map-context-menu');
+    mapArea.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+      contextMenu.style.display = 'block';
+      // 위치 조정 (화면 벗어나지 않게)
+      let left = e.clientX;
+      let top = e.clientY;
+      const menuRect = contextMenu.getBoundingClientRect();
+      if (left + menuRect.width > window.innerWidth) left = window.innerWidth - menuRect.width - 10;
+      if (top + menuRect.height > window.innerHeight) top = window.innerHeight - menuRect.height - 10;
+      contextMenu.style.left = left + 'px';
+      contextMenu.style.top = top + 'px';
+    });
+    document.addEventListener('click', function(e) {
+      if (!contextMenu.contains(e.target)) {
+        contextMenu.style.display = 'none';
+      }
+    });
+    window.addEventListener('scroll', () => contextMenu.style.display = 'none');
+    window.addEventListener('resize', () => contextMenu.style.display = 'none');
+
+    // 검색 토글 버튼 기능
+    const searchToggleBtn = document.querySelector('.map-search-header');
+    const mapSearch = document.querySelector('.map-search');
+
+    if (searchToggleBtn && mapSearch) {
+      searchToggleBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const isOpen = mapSearch.classList.toggle('open');
+        searchToggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      // 바깥 클릭 시 닫기
+    //   document.addEventListener('click', function(e) {
+    //     if (mapSearch.classList.contains('open') && !mapSearch.contains(e.target) && e.target !== searchToggleBtn) {
+    //       mapSearch.classList.remove('open');
+    //       searchToggleBtn.setAttribute('aria-pressed', 'false');
+    //     }
+    //   });
+    }
+
+    // analysis-layer-list 드래그&드롭 정렬
+    (function() {
+      const list = document.querySelector('.analysis-layer-list');
+      if (!list) return;
+      let draggingEl = null;
+      let placeholder = null;
+      let offsetY = 0;
+
+      list.querySelectorAll('.layer-drag').forEach(handle => {
+        handle.style.cursor = 'grab';
+        handle.addEventListener('mousedown', function(e) {
+          e.preventDefault();
+          draggingEl = handle.closest('li');
+          placeholder = document.createElement('li');
+          placeholder.className = 'drag-placeholder';
+          placeholder.style.height = draggingEl.offsetHeight + 'px';
+          draggingEl.parentNode.insertBefore(placeholder, draggingEl.nextSibling);
+          draggingEl.classList.add('dragging');
+          offsetY = e.clientY - draggingEl.getBoundingClientRect().top;
+          draggingEl.style.width = draggingEl.offsetWidth + 'px';
+          draggingEl.style.position = 'absolute';
+          draggingEl.style.zIndex = 1000;
+          draggingEl.style.pointerEvents = 'none';
+          document.body.appendChild(draggingEl);
+          moveAt(e.pageX, e.pageY);
+          document.body.style.userSelect = 'none';
+        });
+      });
+
+      function moveAt(pageX, pageY) {
+        if (!draggingEl) return;
+        draggingEl.style.left = list.getBoundingClientRect().left + 'px';
+        draggingEl.style.top = (pageY - offsetY) + 'px';
+      }
+
+      document.addEventListener('mousemove', function(e) {
+        if (!draggingEl) return;
+        moveAt(e.pageX, e.pageY);
+        // 위치 계산
+        const rects = Array.from(list.children).filter(li => li !== draggingEl && li !== placeholder);
+        for (const li of rects) {
+          const rect = li.getBoundingClientRect();
+          if (e.clientY < rect.top + rect.height / 2) {
+            list.insertBefore(placeholder, li);
+            break;
+          } else {
+            list.appendChild(placeholder);
+          }
+        }
+      });
+
+      document.addEventListener('mouseup', function(e) {
+        if (!draggingEl) return;
+        draggingEl.classList.remove('dragging');
+        draggingEl.style.position = '';
+        draggingEl.style.zIndex = '';
+        draggingEl.style.pointerEvents = '';
+        draggingEl.style.width = '';
+        draggingEl.style.left = '';
+        draggingEl.style.top = '';
+        list.insertBefore(draggingEl, placeholder);
+        placeholder.remove();
+        placeholder = null;
+        draggingEl = null;
+        document.body.style.userSelect = '';
+      });
+    })();
+
+    
+
+    // 지도 핀 팝업 스타일 (SCSS는 이미 안내, 여기선 style 태그로 샘플)
+    const style = document.createElement('style');
+    style.innerHTML = `
+    .map-pin-popup { display: none; position: fixed; z-index: 3000; background: #fff; border-radius: 1.2rem; border: 1px solid #d8d8d8; box-shadow: 0 8px 32px rgba(0,0,0,0.18); min-width: 24rem; max-width: 32rem; }
+    .map-pin-popup.show { display: block; }
+    .map-pin-popup-content { position: relative; padding: 2rem; }
+    .map-pin-popup-close { position: absolute; top: 1.2rem; right: 1.2rem; background: none; border: none; font-size: 2.2rem; color: #888; cursor: pointer; line-height: 1; padding: 0; transition: color 0.15s; }
+    .map-pin-popup-close:hover { color: #222; }
+    .map-pin-popup-inner { font-size: 1.5rem; color: #222; line-height: 1.5; }
+    `;
+    document.head.appendChild(style);
+
+    // 지도 핀 팝업 JS
+    function showMapPinPopup(x, y, html) {
+      const popup = document.getElementById('map-pin-popup');
+      const inner = popup.querySelector('.map-pin-popup-inner');
+      inner.innerHTML = html;
+      popup.classList.add('show');
+      // 위치 조정 (x, y는 client 좌표)
+      const popupRect = popup.getBoundingClientRect();
+      let left = x;
+      let top = y;
+      if (left + popupRect.width > window.innerWidth) left = window.innerWidth - popupRect.width - 10;
+      if (top + popupRect.height > window.innerHeight) top = window.innerHeight - popupRect.height - 10;
+      popup.style.left = left + 'px';
+      popup.style.top = top + 'px';
+    }
+    document.querySelector('.map-pin-popup-close').addEventListener('click', function() {
+      document.getElementById('map-pin-popup').classList.remove('show');
+    });
+    document.addEventListener('click', function(e) {
+      const popup = document.getElementById('map-pin-popup');
+      if (popup.classList.contains('show') && !popup.contains(e.target) && !e.target.classList.contains('map-pin')) {
+        popup.classList.remove('show');
+      }
+    });
+    document.querySelectorAll('.map-pin').forEach(pin => {
+      pin.addEventListener('click', function(e) {
+        e.stopPropagation();
+        showMapPinPopup(e.clientX, e.clientY, `<strong>여기는 핀 팝업!</strong><br>원하는 HTML을 넣으세요.`);
+      });
+    });
 
     </script>
 </body>

@@ -774,3 +774,160 @@
         }
     }
 }
+
+// 시나리오 분석 현황 박스 (클래스명 및 스타일 개선)
+.scenario-wrap{
+    background: url(#{$image-path}/sub/scenario-bg.png) no-repeat 0 0;
+    height: 54.2rem;
+    padding: 4rem;
+}
+.scenario-info {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap:1.8rem;
+  background: none;
+}
+.help-text{
+    text-align: right;
+    color: #0050d1;
+    font-size: 1.9rem;
+    .notice-icon{
+        display: inline-block;
+        height: 2rem;
+        line-height: 1;
+        vertical-align: top;
+        padding-left: 2.8rem;
+        background: url(#{$image-path}/icon/icon-info@20x20.png) no-repeat 0 0;
+    }
+}
+
+.scenario-info__box {
+  border-radius: 1.5rem;
+  //padding: 2.5rem 3rem 2.5rem 3rem;
+  padding: .2rem 0.2rem 0.2rem .5rem;
+  border-radius: 1.2rem;
+  //box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0;
+  position: relative;
+
+
+  &.analyzing {
+    background: #d3ebfd;
+    border-radius: 1.2rem;
+    .status-label { color: #2586c6; }
+    .status-bar { background: #d2eafd; }
+    .bar { background: #2586c6; }
+    .status-icon { color: #2586c6; }
+  }
+  &.analyzed {
+    border-radius: 1.2rem;
+    background: #d8eedd;
+    .status-label { color: #2a9a5b; }
+    .status-bar { background: #d2f5e0; }
+    .bar { background: #2a9a5b; }
+    .status-icon { color: #2a9a5b; }
+  }
+}
+
+.scenario-info__content {
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background-color: #fff;
+  border-radius: 1.2rem;
+  padding: 3rem;
+  line-height: 1;
+}
+
+.scenario-info__title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #1d1d1d;
+}
+
+.scenario-info__desc {
+  font-size: 1.7rem;
+  color: #1d1d1d;
+}
+
+.scenario-info__meta {
+  font-size: 1.5rem;
+  color: #717171;
+  display: flex;
+  gap: 2rem;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 2rem;
+}
+
+.scenario-info__status {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1.1rem;
+  padding-left: 2.5rem;
+}
+
+.status-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.status-icon {
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+.status-bar {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: #eee;
+  margin: 0.2rem 0 0.5rem 0;
+  position: relative;
+  .bar {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s;
+  }
+}
+.status-percent {
+  font-size: 1.1rem;
+  strong { font-size: 1.4rem; color: #222; }
+  margin-bottom: 0.2rem;
+}
+.krds-btn {
+  font-size: 1.15rem;
+  padding: 0.45rem 1.1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #bbb;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+  &:hover { background: #f0f0f0; }
+}
+
+// 안내문구 스타일
+.scenario-info__notice {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 2.2rem auto;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.25rem;
+  color: #2266bb;
+  background: none;
+  font-weight: 500;
+  .notice-icon {
+    font-size: 1.3rem;
+    margin-right: 0.2rem;
+  }
+}

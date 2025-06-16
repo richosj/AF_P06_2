@@ -20,70 +20,61 @@
 
     <main id="contents">
         <div class="page-header">
-            <h2 class="page-header-title">마이페이지</h2>
+            <h2 class="page-header-title">시나리오 분석 현황</h2>
         </div>
         <!-- //page-header -->
 
         <div class="page-content">
-            {{> lnb}}
+            
             <div class="page-content-body">
-                <header class="page-content-header">
-                    <h3 class="page-content-header-title">회원정보 수정</h3>
-                </header>
-                
-                <div class="view-container">
-                    <section>
-                        <h4 class="section-title">기본정보</h4>
-                        <table class="meta-table">
-                            <colgroup>
-                                <col style="width: 100px;">
-                                <col style="width: auto;">
-                                <col style="width: 110px;">
-                                <col style="width: auto;">
-                            </colgroup>
-                            <tr>
-                                <th>이름 <i class="required"></i></th>
-                                <td><input type="text" class="krds-input" value="홍길동"></td>
-                                <th>사용자권한 <i class="required"></i></th>
-                                <td>일반 관리자</td>
-                            </tr>
-                            <tr>
-                                <th>이메일 <i class="required"></i></th>
-                                <td><input type="text" class="krds-input" value="aaa@naver.com"></td>
-                                <th>사용자등급 <i class="required"></i></th>
-                                <td>
-                                    <select name="" id="" class="krds-form-select">
-                                        <option value="1">1레벨 접근등급</option>
-                                        <option value="2">2레벨 접근등급</option>
-                                        <option value="3">3레벨 접근등급</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            
-                            <tr>
-                                <th>전화번호 <i class="required"></i></th>
-                                <td><input type="text" class="krds-input" value="010-0000-0000"></td>
-                                <th>소속기관 <i class="required"></i></th>
-                                <td>
-                                    <div class="input-group">
-                                        <input type="text" class="krds-input" value="국립해양조사원">
-                                        <button type="button" class="krds-btn secondary ml-5"><i class="svg-icon ico-sch"></i>검색</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            
-                        </table>
-                    </section>
-
-                    <div class="footer-actions">
-                        <div class="l"><a href="#" class="krds-btn secondary">취소</a></div>
-                        <div class="r">
-                            <a href="#" class="krds-btn primary">수정</a>
+                <div class="scenario-wrap">
+                    <div class="help-text">
+                        <span class="notice-icon">분석활용 시나리오는 서로 다른 시나리오일 경우에만 동시에 분석을 진행할 수 있습니다.</span>
+                    </div>
+                    <div class="scenario-info">
+                        <div class="scenario-info__box analyzing">
+                            <div class="scenario-info__content">
+                                <div class="scenario-info__title">수심 및 지형변화 양상 예측 기술</div>
+                                <div class="scenario-info__desc">
+                                    수심 변화 예측, 수심 데이터 신뢰도 분석, 구조물, 준설정보, 하천유량 정보를 제공합니다.
+                                </div>
+                                <div class="scenario-info__meta">
+                                    <span>설정기간 : 2023.05.01</span>
+                                    <span>설정데이터 1 : 수심해상도 - 50M</span>
+                                    <span>설정데이터 2 : -</span>
+                                    <span>설정데이터 3 : -</span>
+                                </div>
+                            </div>
+                            <div class="scenario-info__status">
+                                <div class="status-label">분석중 <span class="status-icon">⏳</span></div>
+                                <div class="status-bar"><div class="bar" style="width:85%"></div></div>
+                                <div class="status-percent">진행률 <strong>85%</strong></div>
+                                <button class="krds-btn">분석 중단</button>
+                            </div>
+                        </div>
+                        <div class="scenario-info__box analyzed">
+                            <div class="scenario-info__content">
+                                <div class="scenario-info__title">수심 및 지형변화 양상 예측 기술</div>
+                                <div class="scenario-info__desc">
+                                    수심 변화 예측, 수심 데이터 신뢰도 분석, 구조물, 준설정보, 하천유량 정보를 제공합니다.
+                                </div>
+                                <div class="scenario-info__meta">
+                                    <span>설정기간 : 2023.05.01</span>
+                                    <span>설정데이터 1 : 수심해상도 - 50M</span>
+                                    <span>설정데이터 2 : -</span>
+                                    <span>설정데이터 3 : -</span>
+                                </div>
+                            </div>
+                            <div class="scenario-info__status">
+                                <div class="status-label">분석완료 <span class="status-icon">✔️</span></div>
+                                <div class="status-bar"><div class="bar" style="width:100%"></div></div>
+                                <div class="status-percent">진행률 <strong>100%</strong></div>
+                                <button class="krds-btn">분석 결과</button>
+                            </div>
                         </div>
                     </div>
-
                 </div>
-                
+                <!-- //scenario-wrap -->
             </div>
             <!-- //page-content-body -->
         </div>
